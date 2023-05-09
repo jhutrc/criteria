@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>[flow](Figure 1.tif) &#8212; Beers Criteria</title>
+    <title>flow &#8212; Beers Criteria</title>
   
   
   
@@ -158,7 +158,7 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="chapter1.html">abstract</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">[flow](Figure 1.tif)</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">flow</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chapter3.html">excel</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chapter4.html">gradient</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chapter5.html">tell</a></li>
@@ -343,7 +343,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>[flow](Figure 1.tif)</h1>
+    <h1>flow</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -357,9 +357,14 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="flow-figure-1-tif">
-<h1>[flow](Figure 1.tif)<a class="headerlink" href="#flow-figure-1-tif" title="Permalink to this heading">#</a></h1>
-<div class="cell docutils container">
+  <section class="tex2jax_ignore mathjax_ignore" id="flow">
+<h1>flow<a class="headerlink" href="#flow" title="Permalink to this heading">#</a></h1>
+<div class="cell tag_hide-input docutils container">
+<details class="hide above-input">
+<summary aria-label="Toggle hidden content">
+<span class="collapsed">Show code cell source</span>
+<span class="expanded">Hide code cell source</span>
+</summary>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
@@ -385,9 +390,6 @@ document.write(`
 <span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([(</span><span class="s2">&quot;list&quot;</span><span class="p">,</span> <span class="s2">&quot;tx&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;firstse&quot;</span><span class="p">,</span> <span class="s2">&quot;elig&quot;</span><span class="p">)</span> <span class="p">])</span>
 <span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([</span> <span class="p">(</span><span class="s2">&quot;tx&quot;</span><span class="p">,</span><span class="s2">&quot;outc&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;elig&quot;</span><span class="p">,</span> <span class="s2">&quot;valid&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;elig&quot;</span><span class="p">,</span> <span class="s2">&quot;train&quot;</span><span class="p">)])</span>
 
-
-
-
 <span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> 
         <span class="n">nx</span><span class="o">.</span><span class="n">get_node_attributes</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="s1">&#39;pos&#39;</span><span class="p">),</span> 
         <span class="n">with_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> 
@@ -403,6 +405,7 @@ document.write(`
 </pre></div>
 </div>
 </div>
+</details>
 <div class="cell_output docutils container">
 <img alt="_images/e64626b85a0796885fc7aab964244c27138bfceb96aa514afc51087185878c4f.png" src="_images/e64626b85a0796885fc7aab964244c27138bfceb96aa514afc51087185878c4f.png" />
 </div>
