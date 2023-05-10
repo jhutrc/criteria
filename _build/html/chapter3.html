@@ -356,9 +356,14 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hospitalists">Hospitalists</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#raw">1. Raw</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#raw">1. Raw</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">1.1 Excel</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#stata">1.2 Stata</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dofiles">1.2 dofiles</a></li>
+</ul>
+</li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#usrds">2. usrds</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dofiles">2.1. dofiles</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">2.1. dofiles</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#queue">2.2. queue</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#exposure">2.3. exposure</a></li>
 </ul>
@@ -397,6 +402,31 @@ document.write(`
 <li><p>import</p></li>
 <li><p>export</p></li>
 </ul>
+<section id="id1">
+<h4>1.1 Excel<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h4>
+<p><a class="reference external" href="https://www.dropbox.com/s/gy5ynqzvau6inl4/1-first%20gen%20antihisitamines.xlsx?dl=0">1-first gen antihisitamines</a></p>
+<p><a class="reference external" href="https://www.dropbox.com/s/4dvquqf597egvbv/2-antiparkinsonian%20agents.xlsx?dl=0">2-antiparkinsonian agents</a></p>
+<p><a class="reference external" href="https://www.dropbox.com/s/frejy31ceaenhsz/3-Antispasmodics.xlsx?dl=0">3-Antispasmodics</a></p>
+<p><a class="reference external" href="https://www.dropbox.com/s/dmu6zoicdkpbb8n/4-Antithrombotics.xlsx?dl=0">4-Antithrombotics</a></p>
+<p><a class="reference external" href="https://www.dropbox.com/s/9hrngpqbgc956i2/5-antiinfective%20agents.xlsx?dl=0">5-antiinfective agents</a></p>
+<p><a class="reference external" href="https://www.dropbox.com/s/nfg25jjtpfpzffs/6-Peripheral%20alpha-1%20blockers.xlsx?dl=0">6-Peripheral alpha-1 blockers</a></p>
+<p><a class="reference external" href="https://www.dropbox.com/s/23p8g6fs7vmqpyz/7-Central%20alpha-agonists.xlsx?dl=0">7-Central alpha-agonists</a></p>
+<p><a class="reference external" href="https://www.dropbox.com/s/0f9xl0umthep7vb/8-Other%20CNS%20alpha-agonists.xlsx?dl=0">8-Other CNS alpha-agonists</a></p>
+<p><a class="reference external" href="https://www.dropbox.com/s/gajotmuprtmnk1i/9-Antidepressants.xlsx?dl=0">9-Antidepressants</a></p>
+<p><a class="reference external" href="https://www.dropbox.com/s/ppp99392qhau2zx/10-Antipsychotic%20agents.xlsx?dl=0">10-Antipsychotic agents</a></p>
+<p><a class="reference external" href="https://www.dropbox.com/s/af5ib26ce0cn8tf/11-Barbituates.xlsx?dl=0">11-Barbituates</a></p>
+<p><a class="reference external" href="https://www.dropbox.com/s/jaaxpfma98spimi/12-Benzodiazepine%20lists.xlsx?dl=0">12-Benzodiazepine lists</a></p>
+<p><a class="reference external" href="https://www.dropbox.com/s/cvvzkcilaq487c6/13-Nonbenzodiazepines%20-%20Z-drugs.xlsx?dl=0">13-Nonbenzodiazepines - Z-drugs</a></p>
+<p><a class="reference external" href="https://www.dropbox.com/s/s08u88h7mcx6uof/14-Ergoloid%20Mesylates.xlsx?dl=0">14-Ergoloid Mesylates</a></p>
+<p><a class="reference external" href="https://www.dropbox.com/s/m47qup81r7n8w7z/15-Androgens.xlsx?dl=0">15-Androgens</a></p>
+<p><a class="reference external" href="https://www.dropbox.com/s/13o81mficb5abgb/16-Estrogens.xlsx?dl=0">16-Estrogens</a></p>
+<p><a class="reference external" href="https://www.dropbox.com/s/bk9p1cb16cutz6u/17-Growth%20hormone.xlsx?dl=0">17-Growth hormone</a></p>
+<p><a class="reference external" href="https://www.dropbox.com/s/cxjwtyho9w07zbw/18-Insulin.xlsx?dl=0">18-Insulin</a></p>
+<p><a class="reference external" href="https://www.dropbox.com/s/9dttou8zopdefkv/19-Sulfonylureas.xlsx?dl=0">19-Sulfonylureas</a></p>
+<p><a class="reference external" href="https://www.dropbox.com/s/la3708gryt3jxiy/20-38.xlsx?dl=0">20-38</a></p>
+</section>
+<section id="stata">
+<h4>1.2 Stata<a class="headerlink" href="#stata" title="Permalink to this heading">#</a></h4>
 <div class="highlight-stata notranslate"><div class="highlight"><pre><span></span>import excel <span class="s">&quot;1-first gen antihisitamines.xlsx&quot;</span>, sheet(<span class="s">&quot;de-duplicated list&quot;</span>)<span class="k"> clear</span>
 <span class="k">drop in</span> <span class="m">1</span><span class="o">/</span><span class="m">6</span>
 <span class="k">replace</span> A = <span class="nf">strtrim</span>(A)
@@ -839,6 +869,9 @@ import excel <span class="s">&quot;20-38&quot;</span>, sheet(<span class="s">&qu
 <span class="k">save</span> 38_anticholinergics,replace 
 </pre></div>
 </div>
+</section>
+<section id="dofiles">
+<h4>1.2 dofiles<a class="headerlink" href="#dofiles" title="Permalink to this heading">#</a></h4>
 <div class="highlight-stata notranslate"><div class="highlight"><pre><span></span><span class="k"> clear</span>
 <span class="k">   use</span>       01_antihistamines
 <span class="k">append</span> using 02_antiparkinsons
@@ -914,10 +947,11 @@ export delimited using <span class="s">&quot;05_antiinfective.txt&quot;</span>, 
 </pre></div>
 </div>
 </section>
+</section>
 <section id="usrds">
 <h3>2. usrds<a class="headerlink" href="#usrds" title="Permalink to this heading">#</a></h3>
-<section id="dofiles">
-<h4>2.1. dofiles<a class="headerlink" href="#dofiles" title="Permalink to this heading">#</a></h4>
+<section id="id2">
+<h4>2.1. dofiles<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h4>
 <ul class="simple">
 <li><p><a class="reference external" href="https://raw.githubusercontent.com/jhutrc/criteria/main/01_antihistamines_expR.do">dofile1</a></p></li>
 <li><p><a class="reference external" href="https://raw.githubusercontent.com/jhutrc/criteria/main/02_antiparkinsons_expR.do">dofile2</a></p></li>
@@ -2230,9 +2264,14 @@ import excel <span class="s">&quot;17_classR.xlsx&quot;</span>, sheet(<span clas
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hospitalists">Hospitalists</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#raw">1. Raw</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#raw">1. Raw</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">1.1 Excel</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#stata">1.2 Stata</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dofiles">1.2 dofiles</a></li>
+</ul>
+</li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#usrds">2. usrds</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dofiles">2.1. dofiles</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">2.1. dofiles</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#queue">2.2. queue</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#exposure">2.3. exposure</a></li>
 </ul>
