@@ -1,0 +1,930 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>paper &#8212; Beers Criteria</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" href="_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'chapter7';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="references" href="chapter6.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="intro.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/medicine.shield.white.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/medicine.shield.white.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="intro.html">
+                    title
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="chapter1.html">background</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter2.html">method</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter3.html">results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter4.html">conclusion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter5.html">acknowledgements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter6.html">references</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">paper</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fchapter7.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/chapter7.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>paper</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="paper">
+<h1>paper<a class="headerlink" href="#paper" title="Permalink to this heading">#</a></h1>
+<p><strong>Association of Potentially Inappropriate Medication Classes with Mortality Risk Among Older Adults Initiating Hemodialysis</strong></p>
+<p><strong>Potentially Inappropriate Medications in Dialysis</strong></p>
+<p>Rasheeda K. Hall MD, MBA, MHS1,2, Abimereki D<a class="reference external" href="https://word2md.com">.</a> Muzaale MD, MPH3, Sunjae Bae KMD, MHS, MPH, PhD3, Stella M. Steal MLS4, Lori M. Rosman MLS4, Dorry L. Segev MD, PhD5, Mara McAdams-DeMarco PhD5</p>
+<p>1Department of Medicine, Duke University School of Medicine, Durham, NC</p>
+<p>2Durham Veterans Affairs Medical Center, Durham, NC</p>
+<p>3Department of Surgery, Johns Hopkins University School of Medicine, Baltimore, MD</p>
+<p>4Welch Medical Library, Johns Hopkins University School of Medicine, Baltimore, MD</p>
+<p>5Department of Surgery, New York University School of Medicine, New York City, NY</p>
+<p><strong>Corresponding author:</strong> Rasheeda Hall, 2424 Erwin Road, Suite 605, Durham NC 27705; <a class="reference external" href="mailto:rasheeda&#46;stephens&#37;&#52;&#48;duke&#46;edu">rasheeda<span>&#46;</span>stephens<span>&#64;</span>duke<span>&#46;</span>edu</a>, Phone: (919) 660-6861; ORCID: [0000-0002-3057-4828](javascript:popup_orcidDetail(’<a class="reference external" href="http://orcid.org">http://orcid.org</a>’,’0000-0002-3057-4828’);)</p>
+<p><strong>Abstract</strong></p>
+<p><strong>Background</strong></p>
+<p>Older adults initiating dialysis have high risk of mortality and that risk may be related to potentially inappropriate medications (PIMs). Our objective was to identify and validate mortality risk associated with American Geriatrics Society Beers Criteria PIM classes and concomitant PIM use.</p>
+<p><strong>Methods</strong></p>
+<p>We used United States Renal Data System data to establish a cohort of adults aged ≥65 years initiating dialysis (2013-2014) and had no PIM prescriptions in the six months prior to dialysis initiation. In a development cohort (40% sample), adjusted Cox proportional hazards models were performed to determine which of 30 PIM classes were associated with mortality (or “high risk” PIMs). Adjusted Cox models were performed to assess association of number of “high risk” PIM fills/month with mortality. All models were repeated in the validation cohort (60% sample).</p>
+<p><strong>Results</strong></p>
+<p>In the development cohort (n=15,570), only 13 of 30 PIM classes were associated with higher mortality risk. Compared to those with no “high risk” PIM fills/month, patients having one “high risk” PIM fill/month had 1.29-fold (95% confidence interval [CI], 1.21-1.38) increased risk of death; those with two or more “high risk” PIM fills/month had 1.40-fold (95% CI:1.24-1.58) increased risk. These findings were similar in the validation cohort (n=23,569).</p>
+<p><strong>Conclusions</strong></p>
+<p>Only a minority of Beers Criteria PIM classes may be associated with mortality in the older dialysis population; however, mortality risk increases with concomitant use of “high risk” PIMs. Additional studies are needed to confirm these associations and their underlying mechanisms.</p>
+<p><strong>Keywords:</strong> inappropriate prescribing, renal failure, aged, medication management</p>
+<p><strong>Key Points</strong></p>
+<ul class="simple">
+<li><p>Less than half of medication classes in the American Geriatrics Society Beers Criteria increase risk of death in older adults who are new to dialysis.</p></li>
+<li><p>For older adults who are new to dialysis, having more than one “high risk” medication classes may increase risk of experiencing death.</p></li>
+</ul>
+<p><strong>1. Introduction</strong></p>
+<p>With approximately 50% of older adults initiating dialysis experiencing death within a year, [1] there is a significant need to identify and mitigate risk factors. Polypharmacy is common among older adults receiving dialysis and is a risk factor for medication-related problems and related mortality.[2, 3] To support prescribing practices that minimize these complications, the American Geriatrics Society Beers Criteria is an important tool that provides a list of potentially inappropriate medications (PIMs) – medications that carry greater risk of harm than benefit in older adults [4]. While the Beers Criteria includes guidance for medication use in older adults with reduced kidney function, it does not provide specific guidance for those receiving dialysis. Because PIMs are commonly prescribed to patients receiving dialysis,[5, 6] it is important to uncover evidence on mortality risk of PIMs in the older dialysis population. Such inquiry can inform both investigations of mechanisms underlying associations between PIMs and mortality and interventions targeting older adults receiving dialysis.</p>
+<p>While several studies demonstrate prevalence and harm of PIMs in older adults with chronic kidney disease or no kidney disease at all [7-11], older adults receiving dialysis may have different levels of risk of harm from PIM use. First, risk associated with some PIMs may be altered in renal failure due to impaired renal clearance and/or lower cytochrome P450 metabolism of non-renally cleared medications [12]. Second, kidney disease often co-occurs with other conditions, such that an older adult receiving dialysis may have clinical indications for use of multiple PIMs (e.g., concomitant use of benzodiazepine and gabapentin) [13]. While multiple PIMs may confer greater risk of harm in other populations [14], it isn’t clear if that would be the case among older dialysis patients whose kidney failure alone, but also when combined with multimorbidity, and geriatric syndromes, limits their life expectancy [15].</p>
+<p>Understanding the value of applying the AGS Beers Criteria to the older dialysis population can help dialysis clinicians prevent medication-related problems [16]. As an initial step, our objective was to identify mortality risk associated with having prescriptions for individual and multiple PIM classes. Because the prevalent dialysis population presents both survival bias and selection bias in relation to chronic PIM use, we selected a new PIM user design in a cohort of older adults new to dialysis to assess these associations.</p>
+<p><strong>2. Methods</strong></p>
+<p>2.1 Study Design</p>
+<p>We conducted an observational study to identify individual PIM classes associated with mortality in older dialysis patients. We used the United States Renal Data System (USRDS), including the Centers for Medicare &amp; Medicaid Services (CMS) Medical Evidence form (CMS 2728) and Medicare claims (Parts A, B, and D), to establish the cohort and ascertain clinical characteristics, clinical events, and prescriptions. This study was reviewed by the Johns Hopkins School of Medicine Institutional Review Board and was determined to be exempt.</p>
+<p>2.2 Study Population</p>
+<p>From USRDS, we identified adults aged 65 years who were enrolled in Medicare Parts A, B, and D and initiated hemodialysis between 1/1/2013 and 12/31/2014. We selected these years to correspond with the 2013 introduction of Medicare Part D coverage for a specific PIM class, benzodiazepines [17]. We excluded patients who had prescription claims for PIMs (PIM ascertainment detailed below) in the six months prior to dialysis initiation, patients with missing race and body mass index (BMI) data, and those who became ineligible during the first 90 days after dialysis initiation. Reasons for this ineligibility included loss of Medicare coverage, change in dialysis modality, withdrawal from dialysis, kidney transplantation or mortality. With these criteria, we identified 39,319 patients who met eligibility (Figure 1). By randomization, 40% were assigned to a development cohort and 60% to a validation cohort.</p>
+<p>2.3Variables</p>
+<p>We targeted 30 PIM classes listed in the 2019 American Geriatrics Society Beers Criteria (Supplemental Table 1). We compiled a comprehensive list of medications within each of the PIM classes in a systematic manner. First, informaticists used Micromedex, the control vocabularies of MEDLINE and Embase, and medication websites to generate a trade and generic medication name list. Second, this list was curated to allow medications with multiple mechanisms of action to be represented in more than one PIM class. We removed PIMs that with topical or ocular routes of administration. We imported the final list into Stata code to query Medicare Part D claims for PIMs.</p>
+<p>We identified patients who were dispensed a prescription for a PIM based on the evidence for prescription claim. We defined PIM exposure in 30-day person-month windows to account for the highly variable intra-person PIM dispensing patterns observed. To account for as-needed use of several PIM classes, we allowed one 7-day grace period between the end of one prescription (date prescription filled + days’ supply) and the fill date of the subsequent PIM prescription. There was no lag after the end of a prescription given the short-acting nature of PIMs. Similar to PIM exposure, we quantified PIM count for any given 30-day person-month.</p>
+<p>Our primary outcome was all-cause mortality identified through USRDS Core Standard Analytic Files (Patients file) data, augmented through linkage with the Social Security Death Master File. We ascertained model covariates from the CMS 2728 form and diagnosis (International Classification of Diseases (ICD)-9) and procedural (healthcare common procedure coding system/current procedural terminology) codes in Medicare claims during the time between Medicare enrollment and 90 days after enrollment. These patient demographic and clinical characteristics included age, sex, race, ethnicity, BMI, diabetes, cardiovascular disease, peripheral vascular disease, hypertension, chronic obstructive pulmonary disease, history of cancer, drug dependence (i.e., dependence on illicit drugs), inability to ambulate, institutionalization, tobacco use, ESRD cause, and geographic region.</p>
+<p>2.4Statistical Analyses</p>
+<p>With our development cohort, we estimated the risk of mortality associated with PIM dispensing for each of the 30 PIM classes using Cox proportional hazard models. Each model was censored for end of follow-up (9/1/2015), end of Medicare coverage, change in dialysis modality, withdrawal from dialysis, kidney transplantation or mortality. PIMs were treated as a time-varying exposure. For all analyses, we compared patients with a given PIM to those without that PIM to be consistent with previous research in patients undergoing dialysis.[18] This was appropriate because the indications for PIMs are broad and common in this population; furthermore, the indications are not necessarily captured through claims. To minimize confounding, the models were adjusted for age, sex, race, ethnicity, diabetes, cardiovascular disease, peripheral vascular disease, hypertension, chronic obstructive pulmonary disease, history of cancer, drug dependence, inability to ambulate, institutionalization, tobacco use, ESRD cause, and geographic region. Of note, BMI had no association in univariate analyses so it was not included in final models.</p>
+<p>We grouped PIMs as “high risk” or “low risk” based on trend of hazard ratio (HR): if HR &gt;1, irrespective of its confidence interval including 1 or not, the PIM was assigned as “high risk”. PIMs with HR&lt;1 were all assigned as “low risk”. After identifying “high risk” PIMs, those with HR&gt;1 for mortality, we performed descriptive statistics of cohort characteristics stratified by number of “high risk” PIM fills within any given month (none, one, and two or more). Further, we estimated the risk of mortality associated with “high risk” PIM fill count in any given month (none, one, and two or more) using Cox proportional hazards model (adjusting for same covariates described above). Using our validation cohort, we repeated these models. In the combined cohort, we added interaction terms to the model to test for interaction between PIM count and age (ages 65 to 70 and &gt;70) and gender. We used a two-sided <em>α</em> of 0.05 to indicate a statistically significant difference. Only complete cases were included in regression models. The only variables with missing data were race (&lt;1%) and (BMI) (&lt;1%). Proportional hazards models were confirmed visually by graphing the log-log plot of survival and statistically using Schoenfeld residuals. All analyses were performed using Stata 14.2/MP for Linux (College Station, Texas).</p>
+<p><strong>3. Results</strong></p>
+<p>3.1Mortality risk of PIM classes</p>
+<p>Among patients in the development cohort (n=15,750), the median (IQR) time to death was 0.64 (0.33, 1.07) years. Among the 30 PIM classes, mortality risk was higher among patients with any exposure (compared to those without) to 13 PIM classes (Table 1; Figure 2). Among these 13 “high risk” PIM classes, the most prevalent in descending order were opioids [HR 1.27 (1.2, 1.34)] (54.6%), corticosteroids [HR 1.12 (1.01, 1.24)] (20.7%) and benzodiazepines [HR 1.18 (1.08, 1.29)] (18.6%). Table 2 shows the remaining 17 “low risk” PIM classes in which the risk of mortality was not higher among those with PIM exposure. Among those PIMs includes proton pump inhibitors, antihypertensives, and insulin.</p>
+<p>3.2Cohort characteristics</p>
+<p>During the observation period, only 31% (n=4,909) In the development cohort had no exposure to any of the “high risk” PIMs, while 51% (n=8,048) and 18% (n=2,793) had one and two or more fills in any given month, respectively. Compared to those with none or only one fill for a “high risk” PIM, those with two or more fills for a “high risk” PIM within any given month had a greater proportion of men, comorbid conditions like chronic obstructive pulmonary disease, peripheral vascular disease, and cancer, as well as functional limitations, including inability to ambulate, institutionalization, and disabled employment status (Table 3).</p>
+<p>3.3PIM count and Mortality Risk</p>
+<p>Compared to those with no “high risk” PIM fills/month, patients having one “high risk” PIM fill/month were 1.29-fold (95% confidence interval [CI], 1.21-1.38) more likely to die; those with two or more “high risk” PIM fills/month were at a 1.40-fold (95% CI:1.24-1.58) increased risk. There were no differences in the association of PIM count by age (p=0.54) or gender (p=0.69).</p>
+<p>3.4Validation</p>
+<p>The validation cohort (n=23,569) had similar demographic and clinical characteristics to the development cohort (Supplemental Table 2), as well as, median (IQR) time to death [0.64 (0.33-1.06) years]. Using the validation cohort, we found hazard ratios for mortality to be similar to the development cohort (Figure 2; Supplemental Tables 3). Compared to those with no “high risk” PIM fills/month, patients having one “high risk” PIM fill/month were 1.27-fold (95% confidence interval [CI], 1.21-1.34) more likely to die; those with two or more “high risk” PIM fills/month were at a 1.30-fold (95% CI:1.17-1.45) increased risk.</p>
+<p><strong>4. Discussion</strong></p>
+<p>We examined mortality risk associated with 30 unique AGS Beers Criteria PIM classes in a nationally representative cohort of incident older hemodialysis patients. While most (n=17) PIM classes had no association with increased mortality, we found 13 of these PIM classes carried a risk of mortality (indicated by HR &gt;1), primarily those representing psychoactive medications (e.g., opioids, corticosteroids, and benzodiazepines). Compared with those without any “high risk” PIMs, those with 2 or more “high risk” PIMs or one “high risk” PIM had 40% and 29% greater hazard of mortality, respectively. These findings show that most PIMs included in the Beers criteria may not increase mortality risk and suggests additional studies may be warranted to create criteria tailored for the older dialysis population.</p>
+<p>Our findings are consistent with prior studies. Studies that have explored individual PIM classes have identified that opioids and short acting benzodiazepines when codispensed with opioids are associated with mortality in patients receiving dialysis [18]. Additionally, studies that include all PIMs as a single exposure variable, have demonstrated that mortality risk is increased when any PIM is present in separate cohorts of nursing home residents and community-dwelling older adults [19-21]. We build on this existing literature by examining the mortality risk of PIMs of individual PIM classes among older adults receiving dialysis and identifying that risk is only apparent with a subset of Beers Criteria PIMs.</p>
+<p>This study’s findings provide hints to understand why some PIMs were associated with mortality in older adults receiving dialysis. Compared to patients without “high risk” PIM prescriptions, patients with “high risk” PIMs had higher comorbidity burden and a larger proportion had difficulty with ambulation (a marker for disability), which may suggest presence of frailty, a known risk factor for mortality. Because prior studies demonstrate a plausible link between PIMs and frailty [22, 23], this study implies that those with “high risk” PIMs also have other characteristics that predispose them to earlier mortality.</p>
+<p>Compared to the PIM classes that had lower hazards for mortality, those PIM classes with increased hazards for mortality (“high risk” PIMs) were predominantly psychoactive medications, opioids and benzodiazepines, as shown in prior studies [17, 18]. In contrast, PIMs with lower risk of mortality are prescribed for common comorbidities, such as HTN, DM, heart disease, neuropathic pain, and depression. Some of these “low risk” PIM classes, while not associated with mortality, may be associated with geriatric conditions which can yield serious adverse outcomes, such as falls or confusion [10, 11, 24]. Older adults receiving dialysis consider medication management, including prevention of medication-related problems, as an unmet need.[25] Therefore, additional studies are needed to explore risk of all PIM classes in the dialysis population on geriatric conditions and confirm the designation of “high” and “low” risk. For now, clinicians prescribing “high risk” PIMs for older adults receiving dialysis should consider shared decision-making discussions on deprescribing and/or switching to safer alternatives or non-pharmacological therapies [16, 26].</p>
+<p>Our study highlights that the presence of multiple “high risk” PIMs is associated with increased mortality. This is likely due to codispensed short-acting benzodiazepine and opioid prescriptions [17]. This combination along with opioids and gabapentin or multiple meds with anticholinergic effects, can increase risk of sedation and related complications include overdose and subsequent death [4, 27]. Additional studies are needed to uncover all combinations of PIMs that are prevalent and contribute to harm in the older dialysis population. For now, clinicians should recognize the heightened mortality risk when multiple “high risk” PIMs are prescribed and reconsider initiation of additional “high risk” PIMs in patients who are already prescribed one.</p>
+<p>Our studied leveraged the robust prescription claims and nationally representative sample of new users of PIMs initiating dialysis and explored risk for individual PIM classes. However, this study has limitations. As with all claims-based pharmacoepidemiologic studies, possession of PIM is not equivalent with actual use. The limited accuracy of this exposure variable may explain some of the effect estimates that are towards the null. Not only that, actual exposure may be more than accounted for which would strengthen the effect estimates towards mortality risk. Because we explored all PIM classes, our study design did not allow us to optimally minimize confounding by indication for individual PIM classes. This approach was selected because the evidence for specific indications in claims for all PIM classes can be insufficient. Still, this study provides foundational evidence to support additional studies that would explore individual PIM classes with an active comparator using propensity score methods for more definitive evidence on risk of harm. Similarly, we acknowledge that use of mortality as our outcome does not allow for evaluation of the causal pathway of how PIMs contribute to risk of harm. Additional work is needed to explore more specific medication-related harm for geriatric conditions. Last, this study included only incident patients with Medicare coverage prior to dialysis initiation so the results may have limited generalizability to prevalent patients, those with alternative insurance coverage, or those who have history of PIM use. Still, this approach minimized bias related to survival and prior PIM exposure.</p>
+<p><strong>5. Conclusion</strong></p>
+<p>This study identified a subset of AGS Beers Criteria PIMs that are associated with mortality in older adults who are new to dialysis and new PIM users, and demonstrate higher risk when multiple PIMs are present. While additional studies are warranted to confirm this risk for individual medication classes, this evidence provides caution for initiation of “high risk” PIMs and supports additional research to develop a tailored PIMs list for the older dialysis population.</p>
+<p><strong>Statements and Declarations</strong></p>
+<p><strong>Funding:</strong> This work was supported by the National Institute of Diabetes and Digestive and Kidney Diseases (NIDDK) grant R01DK120518 (award to Dr. McAdams DeMarco). Research reported in this publication was also supported by the National Institute on Aging under Award Numbers K76AG059930 (awarded to Dr. Hall) and K08AG065520-01 (awarded to Dr Muzaale) of the National Institutes of Health. D.L.S. was supported by grant K24AI144954 from the National Institute of Allergy and Infectious Diseases (NIAID). The content is solely the responsibility of the authors and does not necessarily represent the official views of the National Institutes of Health. This research is also supported by the American Society of Nephrology Foundation for Kidney Research. The findings and interpretation do not necessarily represent the official views of this foundation.</p>
+<p>These sponsors did not have a deciding role in the study design, analysis, interpretation of the data, writing of the report, or the decision to submit the report for publication.</p>
+<p>The data reported here have been supplied by the United States Renal Data System (USRDS). The interpretation and reporting of these data are the responsibility of the author(s) and in no way should be seen as an official policy or interpretation of the U.S. government.</p>
+<p><strong>Conflicts of Interest:</strong> The authors declare that they have no competing interests.</p>
+<p><strong>Availability of Data and Materials:</strong> The datasets generated and analyzed during the current study have been supplied by the United States Renal Data System (USRDS) but restrictions apply to the availability of these data, which were used under data use agreement, and so are not publicly available.</p>
+<p><strong>Ethics approval:</strong> This study was approved by the Johns Hopkins School of Medicine Institutional Review Board. All methods were performed in accordance with relevant regulations and guidelines.</p>
+<p><strong>Consent to participant: Not applicable.</strong></p>
+<p><strong>Consent for publication: Not applicable.</strong></p>
+<p><strong>Code availability:</strong> The datasets generated and analyzed during the current study have been supplied by the United States Renal Data System (USRDS) but restrictions apply to the availability of these data, which were used under data use agreement for the current study, and so are not publicly available.</p>
+<p><strong>Author contributions:</strong> research idea and study design: AM, RH, MMD; data acquisition: DS; data management: LR, SS, AM, RH; data analysis/interpretation: AM, SB, RH, MMD; statistical analysis: AM, SB; manuscript draft and revision: all authors; supervision or mentorship: MMD.</p>
+<p>Each author contributed important intellectual content during manuscript drafting or revision and agrees to be personally accountable for the individual’s own contributions and to ensure that questions pertaining to the accuracy or integrity of any portion of the work, even one in which the author was not directly involved, are appropriately investigated and resolved, including with documentation in the literature if appropriate.</p>
+<p><strong>Acknowledgements:</strong> The authors thank Donna Crabtree for assistance in formatting the supplemental material.</p>
+<p><strong>References</strong></p>
+<ol class="arabic simple">
+<li><p>Wachterman MW, O’Hare AM, Rahman OK, Lorenz KA, Marcantonio ER, Alicante GK, et al. One-Year Mortality After Dialysis Initiation Among Older Adults. JAMA Intern Med. 2019;179(7):987-90.</p></li>
+<li><p>Alshamrani M, Almalki A, Qureshi M, Yusuf O, Ismail S. Polypharmacy and Medication-Related Problems in Hemodialysis Patients: A Call for Deprescribing. Pharmacy (Basel). 2018;6(3).</p></li>
+<li><p>Manley HJ, Cannella CA, Bailie GR, St Peter WL. Medication-related problems in ambulatory hemodialysis patients: a pooled analysis. Am J Kidney Dis. 2005;46(4):669-80.</p></li>
+<li><p>By the American Geriatrics Society Beers Criteria® Update Expert Panel. American Geriatrics Society 2019 Updated AGS Beers Criteria® for Potentially Inappropriate Medication Use in Older Adults. Journal of the American Geriatrics Society. 2019;67(4):674-94.</p></li>
+<li><p>Parker K, Aasebo W, Stavem K. Potentially Inappropriate Medications in Elderly Haemodialysis Patients Using the STOPP Criteria. Drugs - real world outcomes. 2016;3(3):359-63.</p></li>
+<li><p>Kondo N, Nakamura F, Yamazaki S, Yamamoto Y, Akizawa T, Akiba T, et al. Prescription of potentially inappropriate medications to elderly hemodialysis patients: prevalence and predictors. Nephrology, dialysis, transplantation : official publication of the European Dialysis and Transplant Association - European Renal Association. 2015;30(3):498-505.</p></li>
+<li><p>Roux-Marson C, Baranski JB, Fafin C, Exterman G, Vigneau C, Couchoud C, et al. Medication burden and inappropriate prescription risk among elderly with advanced chronic kidney disease. BMC Geriatr. 2020;20(1):87.</p></li>
+<li><p>Chahine B. Potentially inappropriate medications prescribing to elderly patients with advanced chronic kidney by using 2019 American Geriatrics Society Beers Criteria. Health Sci Rep. 2020;3(4):e214.</p></li>
+<li><p>Hall RK, Blumenthal JB, Doerfler RM, Chen J, Diamantidis CJ, Jaar BG, et al. Risk of Potentially Inappropriate Medications in Adults With CKD: Findings From the Chronic Renal Insufficiency Cohort (CRIC) Study. Am J Kidney Dis. 2021;78(6):837-45 e1.</p></li>
+<li><p>Fick DM, Mion LC, Beers MH, J LW. Health outcomes associated with potentially inappropriate medication use in older adults. Res Nurs Health. 2008;31(1):42-51.</p></li>
+<li><p>Jano E, Aparasu RR. Healthcare outcomes associated with beers’ criteria: a systematic review. Ann Pharmacother. 2007;41(3):438-47.</p></li>
+<li><p>Ladda MA, Goralski KB. The Effects of CKD on Cytochrome P450-Mediated Drug Metabolism. Adv Chronic Kidney Dis. 2016;23(2):67-75.</p></li>
+<li><p>Corsonello A, Fabbietti P, Formiga F, Moreno-Gonzalez R, Tap L, Mattace-Raso F, et al. Chronic kidney disease in the context of multimorbidity patterns: the role of physical performance. BMC Geriatrics. 2020;20(1):350.</p></li>
+<li><p>Xing XX, Zhu C, Liang HY, Wang K, Chu YQ, Zhao LB, et al. Associations Between Potentially Inappropriate Medications and Adverse Health Outcomes in the Elderly: A Systematic Review and Meta-analysis. Ann Pharmacother. 2019;53(10):1005-19.</p></li>
+<li><p>Tamura MK, Tan JC, O’Hare AM. Optimizing renal replacement therapy in older adults: a framework for making individualized decisions. Kidney International. 2012;82(3):261-9.</p></li>
+<li><p>Mohottige D, Manley HJ, Hall RK. Less is More: Deprescribing Medications in Older Adults with Kidney Disease: A Review. Kidney360. 2021;2(9):1510-22.</p></li>
+<li><p>Muzaale AD, Daubresse M, Bae S, Chu NM, Lentine KL, Segev DL, et al. Benzodiazepines, Codispensed Opioids, and Mortality among Patients Initiating Long-Term In-Center Hemodialysis. Clinical Journal of the American Society of Nephrology. 2020;15(6):794-804.</p></li>
+<li><p>Kimmel PL, Fwu CW, Abbott KC, Eggers AW, Kline PP, Eggers PW. Opioid Prescription, Morbidity, and Mortality in United States Dialysis Patients. J Am Soc Nephrol. 2017;28(12):3658-70.</p></li>
+<li><p>Pugh MJ, Marcum ZA, Copeland LA, Mortensen EM, Zeber JE, Noël PH, et al. The quality of quality measures: HEDIS® quality measures for medication management in the elderly and outcomes associated with new exposure. Drugs Aging. 2013;30(8):645-54.</p></li>
+<li><p>Dedhiya SD, Hancock E, Craig BA, Doebbeling CC, Thomas J, 3rd. Incident use and outcomes associated with potentially inappropriate medication use in older adults. Am J Geriatr Pharmacother. 2010;8(6):562-70.</p></li>
+<li><p>Lau DT, Kasper JD, Potter DEB, Lyles A, Bennett RG. Hospitalization and Death Associated With Potentially Inappropriate Medication Prescriptions Among Elderly Nursing Home Residents. Archives of Internal Medicine. 2005;165(1):68-74.</p></li>
+<li><p>Maclagan LC, Maxwell CJ, Gandhi S, Guan J, Bell CM, Hogan DB, et al. Frailty and Potentially Inappropriate Medication Use at Nursing Home Transition. Journal of the American Geriatrics Society. 2017;65(10):2205-12.</p></li>
+<li><p>Muhlack DC, Hoppe LK, Saum K-U, Haefeli WE, Brenner H, Schöttker B. Investigation of a possible association of potentially inappropriate medication for older adults and frailty in a prospective cohort study from Germany. Age and Ageing. 2019;49(1):20-5.</p></li>
+<li><p>Ishida JH, McCulloch CE, Steinman MA, Grimes BA, Johansen KL. Psychoactive Medications and Adverse Outcomes among Older Adults Receiving Hemodialysis. J Am Geriatr Soc. 2019;67(3):449-54.</p></li>
+<li><p>Hall R, Rutledge J, Colón-Emeric C, Fish LJ. Unmet Needs of Older Adults Receiving In-Center Hemodialysis: A Qualitative Needs Assessment. Kidney Med. 2020;2(5):543-51.e1.</p></li>
+<li><p>Hanlon JT, Semla TP, Schmader KE. Alternative Medications for Medications in the Use of High-Risk Medications in the Elderly and Potentially Harmful Drug-Disease Interactions in the Elderly Quality Measures. J Am Geriatr Soc. 2015;63(12):e8-e18.</p></li>
+<li><p>Ali S, Peterson GM, Bereznicki LR, Salahudeen MS. Association between anticholinergic drug burden and mortality in older people: a systematic review. Eur J Clin Pharmacol. 2020;76(3):319-35.</p></li>
+</ol>
+<p><strong>Table 1.</strong>”High-risk” potentially inappropriate medication (PIM) classes.a</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>PIM Class</strong></p></th>
+<th class="head"><p><strong>HR (95% CI)</strong></p></th>
+<th class="head"><p><strong>Proportion (%) in Cohort</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Antispasmodics</p></td>
+<td><p>1.42 (0.97 - 2.09)</p></td>
+<td><p>1.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>Acetylcholinesterase Inhibitors</p></td>
+<td><p>1.38 (0.97 - 1.97)</p></td>
+<td><p>0.7</p></td>
+</tr>
+<tr class="row-even"><td><p>Opioids</p></td>
+<td><p>1.27 (1.20 - 1.34)</p></td>
+<td><p>54.6</p></td>
+</tr>
+<tr class="row-odd"><td><p>Benzodiazepines</p></td>
+<td><p>1.18 (1.08 - 1.29)</p></td>
+<td><p>18.6</p></td>
+</tr>
+<tr class="row-even"><td><p>Antipsychotics</p></td>
+<td><p>1.18 (1.02 - 1.37)</p></td>
+<td><p>6.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>Antiemetics</p></td>
+<td><p>1.18 (0.97 - 1.42)</p></td>
+<td><p>6.3</p></td>
+</tr>
+<tr class="row-even"><td><p>Antiparkinsons</p></td>
+<td><p>1.16 (0.52 - 2.58)</p></td>
+<td><p>0.3</p></td>
+</tr>
+<tr class="row-odd"><td><p>Antiinfective</p></td>
+<td><p>1.13 (0.81 - 1.57)</p></td>
+<td><p>2.3</p></td>
+</tr>
+<tr class="row-even"><td><p>Corticosteroids</p></td>
+<td><p>1.12 (1.01 - 1.24)</p></td>
+<td><p>20.7</p></td>
+</tr>
+<tr class="row-odd"><td><p>Anticholinergics</p></td>
+<td><p>1.11 (0.90 - 1.37)</p></td>
+<td><p>4.1</p></td>
+</tr>
+<tr class="row-even"><td><p>Estrogens</p></td>
+<td><p>1.01 (0.45 - 2.25)</p></td>
+<td><p>0.3</p></td>
+</tr>
+</tbody>
+</table>
+<p>aPIM Classes associated with Mortality (based on HR &gt;1)</p>
+<p>The mortality risk was obtained from a Cox proportional regression model adjusting for</p>
+<p>age, sex, race, ethnicity, diabetes, cardiovascular disease, peripheral vascular disease, hypertension, chronic obstructive pulmonary disease, history of cancer, drug dependence, tobacco use, inability to ambulate, institutionalization, ESRD cause, and geographic region. HR – heart rate; PIM - potentially inappropriate medication</p>
+<p><strong>Table 2.</strong>”Low-risk” potentially inappropriate medication (PIM) classes.a</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>PIM Class</strong></p></th>
+<th class="head"><p><strong>HR (95% CI)</strong></p></th>
+<th class="head"><p><strong>Proportion (%) in Cohort</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Antidepressants</p></td>
+<td><p>0.95 (0.87 - 1.02)</p></td>
+<td><p>25.1</p></td>
+</tr>
+<tr class="row-odd"><td><p>Proton Pump Inhibitors</p></td>
+<td><p>0.89 (0.83 - 0.94)</p></td>
+<td><p>40.6</p></td>
+</tr>
+<tr class="row-even"><td><p>Antiepileptics</p></td>
+<td><p>0.88 (0.80 - 0.96)</p></td>
+<td><p>20.7</p></td>
+</tr>
+<tr class="row-odd"><td><p>H2 Receptor Blockers</p></td>
+<td><p>0.88 (0.76 - 1.02)</p></td>
+<td><p>8.5</p></td>
+</tr>
+<tr class="row-even"><td><p>NSAIDS</p></td>
+<td><p>0.84 (0.71 - 1.01)</p></td>
+<td><p>9.3</p></td>
+</tr>
+<tr class="row-odd"><td><p>Non-dihydropyridine Calcium Channel Blockers</p></td>
+<td><p>0.83 (0.70 - 0.98)</p></td>
+<td><p>6.8</p></td>
+</tr>
+<tr class="row-even"><td><p>Insulin</p></td>
+<td><p>0.81 (0.75 - 0.88)</p></td>
+<td><p>31.5</p></td>
+</tr>
+<tr class="row-odd"><td><p>Barbiturates</p></td>
+<td><p>0.64 (0.29 - 1.42)</p></td>
+<td><p>0.3</p></td>
+</tr>
+<tr class="row-even"><td><p>Central Alpha-1 Agonists</p></td>
+<td><p>0.64 (0.55 - 0.74)</p></td>
+<td><p>13.4</p></td>
+</tr>
+<tr class="row-odd"><td><p>RAS Inhibitors</p></td>
+<td><p>0.61 (0.61 - 0.73)</p></td>
+<td><p>32.1</p></td>
+</tr>
+<tr class="row-even"><td><p>Sulfonylureas</p></td>
+<td><p>0.50 (0.37 - 0.68)</p></td>
+<td><p>3.7</p></td>
+</tr>
+<tr class="row-odd"><td><p>Alpha-1 Blockers</p></td>
+<td><p>0.49 (0.39 - 0.61)</p></td>
+<td><p>6.8</p></td>
+</tr>
+<tr class="row-even"><td><p>Thiazolidinediones</p></td>
+<td><p>0.44 (0.23 - 0.84)</p></td>
+<td><p>1.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>Antithrombotics</p></td>
+<td><p>0.33 (0.05 - 2.35)</p></td>
+<td><p>0.1</p></td>
+</tr>
+<tr class="row-even"><td><p>Androgens</p></td>
+<td><p>0.16 (0.02 - 1.13)</p></td>
+<td><p>0.3</p></td>
+</tr>
+</tbody>
+</table>
+<p>aPIM Classes not associated with Mortality (based on HR &lt;1)</p>
+<p>The mortality risk was obtained from a Cox proportional regression model adjusting for age, sex, race, ethnicity, diabetes, cardiovascular disease, peripheral vascular disease, hypertension, chronic obstructive pulmonary disease, history of cancer, drug dependence, tobacco use, inability to ambulate, institutionalization, ESRD cause, and geographic region. HR – heart rate; NSAIDS – non-steroidal anti-inflammatory drugs; PIM - potentially inappropriate medication; RAS – renin-angiotensin-system</p>
+<p><strong>Table 3.</strong> Characteristics of development cohort stratified by “high-risk” potentially inappropriate medication (PIM) count.a</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p></p></th>
+<th class="head"><p><strong>0 PIMs</strong></p></th>
+<th class="head"><p><strong>1 PIM</strong></p></th>
+<th class="head"><p>≥ <strong>2 PIMs</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p></p></td>
+<td><p><strong>(N=4,909)</strong></p></td>
+<td><p><strong>(N=8,048)</strong></p></td>
+<td><p><strong>(N=2,793)</strong></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Age, median years [IQR]</strong></p></td>
+<td><p>74.3 [69.4-80.1]</p></td>
+<td><p>74.3 [69.4-80.1]</p></td>
+<td><p>73.7 [68.9-79.7]</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Female, %</strong></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Race, %</strong></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>White</strong></p></td>
+<td><p>72.4</p></td>
+<td><p>73.3</p></td>
+<td><p>79.1</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Black</strong></p></td>
+<td><p>21.5</p></td>
+<td><p>21.8</p></td>
+<td><p>18.2</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Otherb</strong></p></td>
+<td><p>6.1</p></td>
+<td><p>5.0</p></td>
+<td><p>2.8</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Hispanic Ethnicity, %</strong></p></td>
+<td><p>12.4</p></td>
+<td><p>11.4</p></td>
+<td><p>9.8</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Comorbid Conditionsc, %</strong></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Diabetes</strong></p></td>
+<td><p>57.8</p></td>
+<td><p>58.9</p></td>
+<td><p>57.0</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Cardiovascular Disease</strong></p></td>
+<td><p>59.3</p></td>
+<td><p>60.4</p></td>
+<td><p>61.8</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Peripheral Vascular Disease</strong></p></td>
+<td><p>11.8</p></td>
+<td><p>13.5</p></td>
+<td><p>14.1</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Hypertension</strong></p></td>
+<td><p>89.4</p></td>
+<td><p>88.8</p></td>
+<td><p>87.8</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>COPD</strong></p></td>
+<td><p>10.4</p></td>
+<td><p>13.1</p></td>
+<td><p>17.4</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>History of Cancer</strong></p></td>
+<td><p>8.8</p></td>
+<td><p>9.5</p></td>
+<td><p>11.3</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Drug Dependence</strong></p></td>
+<td><p>0.6</p></td>
+<td><p>1.0</p></td>
+<td><p>1.4</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Tobacco Use</strong></p></td>
+<td><p>2.9</p></td>
+<td><p>3.9</p></td>
+<td><p>4.8</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Inability to Ambulate</strong></p></td>
+<td><p>18.2</p></td>
+<td><p>18.6</p></td>
+<td><p>23.5</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Institutionalized</strong></p></td>
+<td><p>12.3</p></td>
+<td><p>11.3</p></td>
+<td><p>17.1</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>ESRD Cause, %</strong></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Diabetes</strong></p></td>
+<td><p>46.5</p></td>
+<td><p>46.3</p></td>
+<td><p>43.6</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Hypertension</strong></p></td>
+<td><p>37.2</p></td>
+<td><p>35.6</p></td>
+<td><p>34.3</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Glomerulonephritis</strong></p></td>
+<td><p>4.2</p></td>
+<td><p>4.8</p></td>
+<td><p>5.4</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Other</strong></p></td>
+<td><p>12.2</p></td>
+<td><p>13.3</p></td>
+<td><p>16.8</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Geographic Region, %</strong></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>New England</strong></p></td>
+<td><p>3.7</p></td>
+<td><p>3.4</p></td>
+<td><p>3.9</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Mideast</strong></p></td>
+<td><p>22.3</p></td>
+<td><p>18.2</p></td>
+<td><p>15.1</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Great Lakes</strong></p></td>
+<td><p>18.3</p></td>
+<td><p>17.3</p></td>
+<td><p>18.6</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Plains</strong></p></td>
+<td><p>4.9</p></td>
+<td><p>6.1</p></td>
+<td><p>6.1</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Southeast</strong></p></td>
+<td><p>23.4</p></td>
+<td><p>28.6</p></td>
+<td><p>30.3</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Southwest</strong></p></td>
+<td><p>10.4</p></td>
+<td><p>11.1</p></td>
+<td><p>9.8</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Rocky Mountain</strong></p></td>
+<td><p>1.5</p></td>
+<td><p>1.4</p></td>
+<td><p>2.0</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Farwest</strong></p></td>
+<td><p>15.6</p></td>
+<td><p>14.1</p></td>
+<td><p>14.2</p></td>
+</tr>
+</tbody>
+</table>
+<p>aNumber of “High Risk” PIMs in any given month.</p>
+<p>bOther includes Asian, American Indian or Alaska Native, Native Hawaiian or Pacific Islander, Other or Multiracial, and Unknown</p>
+<p>cRefers to comorbidities, substance use and functional status reported on CMS 2728 form.</p>
+<p>COPD - chronic obstructive pulmonary disease; ESRD – end stage renal disease; IQR – interquartile range; PIM - potentially inappropriate medication</p>
+<p><strong>Figure Legends</strong></p>
+<p>Figure 1. Cohort selection flow.</p>
+<p>Figure 1 Legend: BMI, body mass index; MPO: Medicare Primary, Other; USRDS – United States Renal Data System</p>
+<p>Figure 2. Forest plot of PIM classes and mortality risk in development and validation cohorts. PIM - potentially inappropriate medication</p>
+<p>Figure 2 Legend: Plot shows in black (development cohort, N=15,750) gray and (validation cohort, N=23,569). Adjusted hazard ratios (and 95% confidence intervals) shown, adjusting for age, sex, race, ethnicity, diabetes, cardiovascular disease, peripheral vascular disease, hypertension, chronic obstructive pulmonary disease, history of cancer, drug dependence, tobacco use, inability to ambulate, institutionalization, ESRD cause, and geographic region. ESRD – end stage renal disease; Non DHP CCB – non-dihydropyridine calcium channel blockers; NSAIDS – non-steroidal anti-inflammatory drugs; USRDS – United States Renal Data System</p>
+<p><strong>Supplemental Material</strong></p>
+<p>Table 1. List of medications included within each PIM class.</p>
+<p>Table 2. Baseline characteristics of the validation cohort.</p>
+<p>Table 3. Hazards of mortality for each PIM class in the validation cohort.</p>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="chapter6.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">references</p>
+      </div>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Abimereki Muzaale
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
