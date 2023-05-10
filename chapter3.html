@@ -141,8 +141,8 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="_static/jhm.png" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="_static/jhm.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="_static/JHM.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="_static/JHM.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
   
   
 </a></div>
@@ -370,13 +370,13 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create">1.4 Create</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#usrds">2. USRDS</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#renaldata">2. Renaldata</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dofiles">2.1. dofiles</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#queue">2.2. Queue</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exposure">2.3. Exposure</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classes">3 Classes</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#unsupervised">3. Unsupervised</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eligibility">3.1 Eligibility</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#employ">3.2 Employ</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#medev">3.3 Medev</a></li>
@@ -384,7 +384,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#innovation">3.5 Innovation</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cohort">4. Cohort</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#supervised">4. Supervised</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#curate">4.2 Curate</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#postfile">4.3 Postfile</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#phenotypes">4.4 Phenotypes</a></li>
@@ -392,7 +392,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#score">4.7 Score</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#labels">5 Labels</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adaptive">5. Adaptive</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#putexcel">5.1 Putexcel</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#forrest">5.2 Forrest</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#twoway">5.3 Twoway</a></li>
@@ -898,8 +898,8 @@ export delimited using <span class="s">&quot;05_antiinfective.txt&quot;</span>, 
 </div>
 </section>
 </section>
-<section id="usrds">
-<h2>2. USRDS<a class="headerlink" href="#usrds" title="Permalink to this heading">#</a></h2>
+<section id="renaldata">
+<h2>2. Renaldata<a class="headerlink" href="#renaldata" title="Permalink to this heading">#</a></h2>
 <section id="dofiles">
 <h3>2.1. dofiles<a class="headerlink" href="#dofiles" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
@@ -1073,8 +1073,8 @@ export delimited using <span class="s">&quot;05_antiinfective.txt&quot;</span>, 
 </div>
 </section>
 </section>
-<section id="classes">
-<h2>3 Classes<a class="headerlink" href="#classes" title="Permalink to this heading">#</a></h2>
+<section id="unsupervised">
+<h2>3. Unsupervised<a class="headerlink" href="#unsupervised" title="Permalink to this heading">#</a></h2>
 <div class="highlight-stata notranslate"><div class="highlight"><pre><span></span><span class="k">qui</span> {
 <span class="k">	qui</span> {
 <span class="k">		clear</span>
@@ -1566,8 +1566,8 @@ export delimited using <span class="s">&quot;05_antiinfective.txt&quot;</span>, 
 </div>
 </section>
 </section>
-<section id="cohort">
-<h2>4. Cohort<a class="headerlink" href="#cohort" title="Permalink to this heading">#</a></h2>
+<section id="supervised">
+<h2>4. Supervised<a class="headerlink" href="#supervised" title="Permalink to this heading">#</a></h2>
 <div class="highlight-stata notranslate"><div class="highlight"><pre><span></span><span class="k">timer on</span> <span class="m">4</span>
 <span class="k">use</span>                      12_employR,clear
 <span class="k">merge m</span>:m usrds_id using 13_medevR,keep(matched) nogen
@@ -1850,8 +1850,8 @@ putexcel<span class="k"> set</span> 17_classR,modify
 </div>
 </section>
 </section>
-<section id="labels">
-<h2>5 Labels<a class="headerlink" href="#labels" title="Permalink to this heading">#</a></h2>
+<section id="adaptive">
+<h2>5. Adaptive<a class="headerlink" href="#adaptive" title="Permalink to this heading">#</a></h2>
 <div class="highlight-stata notranslate"><div class="highlight"><pre><span></span><span class="k">collapse</span> (sum)<span class="k"> score</span> <span class="o">*</span>_rx,by(usrds_id<span class="k"> window</span>)
 <span class="k">rename</span> <span class="o">*</span>_rx dose<span class="o">*</span>_rx
 <span class="k">tempfile</span> score_dose
@@ -2260,13 +2260,13 @@ import excel <span class="s">&quot;17_classR.xlsx&quot;</span>, sheet(<span clas
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create">1.4 Create</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#usrds">2. USRDS</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#renaldata">2. Renaldata</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dofiles">2.1. dofiles</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#queue">2.2. Queue</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exposure">2.3. Exposure</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classes">3 Classes</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#unsupervised">3. Unsupervised</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eligibility">3.1 Eligibility</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#employ">3.2 Employ</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#medev">3.3 Medev</a></li>
@@ -2274,7 +2274,7 @@ import excel <span class="s">&quot;17_classR.xlsx&quot;</span>, sheet(<span clas
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#innovation">3.5 Innovation</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cohort">4. Cohort</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#supervised">4. Supervised</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#curate">4.2 Curate</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#postfile">4.3 Postfile</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#phenotypes">4.4 Phenotypes</a></li>
@@ -2282,7 +2282,7 @@ import excel <span class="s">&quot;17_classR.xlsx&quot;</span>, sheet(<span clas
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#score">4.7 Score</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#labels">5 Labels</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#adaptive">5. Adaptive</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#putexcel">5.1 Putexcel</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#forrest">5.2 Forrest</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#twoway">5.3 Twoway</a></li>
