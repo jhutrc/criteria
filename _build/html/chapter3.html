@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>excel &#8212; Beers Criteria</title>
+    <title>results &#8212; Beers Criteria</title>
   
   
   
@@ -64,8 +64,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'chapter3';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="gradient" href="chapter4.html" />
-    <link rel="prev" title="flow" href="chapter2.html" />
+    <link rel="next" title="conclusion" href="chapter4.html" />
+    <link rel="prev" title="method" href="chapter2.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -152,16 +152,17 @@ const thebe_selector_output = ".output, .cell_output"
         <ul class="nav bd-sidenav bd-sidenav__home-link">
             <li class="toctree-l1">
                 <a class="reference internal" href="intro.html">
-                    cheers
+                    title
                 </a>
             </li>
         </ul>
         <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="chapter1.html">abstract</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chapter2.html">flow</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">excel</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chapter4.html">gradient</a></li>
-<li class="toctree-l1"><a class="reference internal" href="chapter5.html">tell</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter1.html">background</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter2.html">method</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">results</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter4.html">conclusion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter5.html">acknowledgements</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter6.html">references</a></li>
 </ul>
 
     </div>
@@ -345,7 +346,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>excel</h1>
+    <h1>results</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -355,39 +356,46 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#informationists">Informationists</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#raw">1. Raw</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">1.1 Excel</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#stata">1.2 Stata</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dofiles">1.2 dofiles</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#excel">1. Excel</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#xlsx">1.1 xlsx</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#import">1.2 Import</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#first">1.2.1 First</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#second">1.2.2 Second</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#third">1.2.3 Third</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fourth">1.2.4 Fourth</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#five">1.2.5 Five</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#usrds">2. usrds</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">2.1. dofiles</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#queue">2.2. queue</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#exposure">2.3. exposure</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#append">1.3 Append</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create">1.4 Create</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classes">3 classes</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#eligibility">3.11 eligibility</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#employ">3.12 employ</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#medev">3.13 medev</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#patients">3.14 patients</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#innovation">3.15 innovation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#usrds">2. USRDS</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dofiles">2.1. dofiles</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#queue">2.2. Queue</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exposure">2.3. Exposure</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cohort">4. cohort</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#baseline">4.1 baseline</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#curate">4.2 curate</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#postfile">4.3 postfile</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">4.4 baseline</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classes">3 Classes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eligibility">3.1 Eligibility</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#employ">3.2 Employ</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#medev">3.3 Medev</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#patients">3.4 Patients</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#innovation">3.5 Innovation</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#filler">5.01 filler</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#preserve">5.1 preserve</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#labels">5.2 labels</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#collapse">5.3 collapse</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#output">5.3 output</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cohort">4. Cohort</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#curate">4.2 Curate</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#postfile">4.3 Postfile</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#phenotypes">4.4 Phenotypes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#risk">4.6 Risk</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#score">4.7 Score</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#labels">5 Labels</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#putexcel">5.1 Putexcel</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#forrest">5.2 Forrest</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#twoway">5.3 Twoway</a></li>
 </ul>
 </li>
 </ul>
@@ -401,19 +409,17 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="excel">
-<h1>excel<a class="headerlink" href="#excel" title="Permalink to this heading">#</a></h1>
-<section id="informationists">
-<h2>Informationists<a class="headerlink" href="#informationists" title="Permalink to this heading">#</a></h2>
-<section id="raw">
-<h3>1. Raw<a class="headerlink" href="#raw" title="Permalink to this heading">#</a></h3>
+  <section class="tex2jax_ignore mathjax_ignore" id="results">
+<h1>results<a class="headerlink" href="#results" title="Permalink to this heading">#</a></h1>
+<section id="excel">
+<h2>1. Excel<a class="headerlink" href="#excel" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
-<li><p><a class="reference external" href="https://jhustata.github.io/book/kkk.html">catalog</a></p></li>
+<li><p>catalog</p></li>
 <li><p>import</p></li>
 <li><p>export</p></li>
 </ul>
-<section id="id1">
-<h4>1.1 Excel<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h4>
+<section id="xlsx">
+<h3>1.1 xlsx<a class="headerlink" href="#xlsx" title="Permalink to this heading">#</a></h3>
 <p><a class="reference external" href="https://www.dropbox.com/s/gy5ynqzvau6inl4/1-first%20gen%20antihisitamines.xlsx?dl=0">1-first gen antihisitamines</a></p>
 <p><a class="reference external" href="https://www.dropbox.com/s/4dvquqf597egvbv/2-antiparkinsonian%20agents.xlsx?dl=0">2-antiparkinsonian agents</a></p>
 <p><a class="reference external" href="https://www.dropbox.com/s/frejy31ceaenhsz/3-Antispasmodics.xlsx?dl=0">3-Antispasmodics</a></p>
@@ -434,6 +440,11 @@ document.write(`
 <p><a class="reference external" href="https://www.dropbox.com/s/cxjwtyho9w07zbw/18-Insulin.xlsx?dl=0">18-Insulin</a></p>
 <p><a class="reference external" href="https://www.dropbox.com/s/9dttou8zopdefkv/19-Sulfonylureas.xlsx?dl=0">19-Sulfonylureas</a></p>
 <p><a class="reference external" href="https://www.dropbox.com/s/la3708gryt3jxiy/20-38.xlsx?dl=0">20-38</a></p>
+</section>
+<section id="import">
+<h3>1.2 Import<a class="headerlink" href="#import" title="Permalink to this heading">#</a></h3>
+<section id="first">
+<h4>1.2.1 First<a class="headerlink" href="#first" title="Permalink to this heading">#</a></h4>
 <div class="highlight-stata notranslate"><div class="highlight"><pre><span></span>import excel <span class="s">&quot;1-first gen antihisitamines.xlsx&quot;</span>, sheet(<span class="s">&quot;de-duplicated list&quot;</span>)<span class="k"> clear</span>
 <span class="k">drop in</span> <span class="m">1</span><span class="o">/</span><span class="m">6</span>
 <span class="k">replace</span> A = <span class="nf">strtrim</span>(A)
@@ -488,6 +499,9 @@ import excel <span class="s">&quot;5-antiinfective agents&quot;</span>, sheet(<s
 <span class="k">save</span> 05_antiinfective,replace
 </pre></div>
 </div>
+</section>
+<section id="second">
+<h4>1.2.2 Second<a class="headerlink" href="#second" title="Permalink to this heading">#</a></h4>
 <div class="highlight-stata notranslate"><div class="highlight"><pre><span></span>import excel <span class="s">&quot;6-Peripheral alpha-1 blockers&quot;</span>, sheet(<span class="s">&quot;De-duplicated_results&quot;</span>)<span class="k"> clear</span>
 <span class="k">drop in</span> <span class="m">1</span><span class="o">/</span><span class="m">6</span>
 <span class="k">replace</span> A = <span class="nf">strtrim</span>(A)
@@ -554,8 +568,8 @@ import excel <span class="s">&quot;11-Barbituates&quot;</span>, sheet(<span clas
 </pre></div>
 </div>
 </section>
-<section id="stata">
-<h4>1.2 Stata<a class="headerlink" href="#stata" title="Permalink to this heading">#</a></h4>
+<section id="third">
+<h4>1.2.3 Third<a class="headerlink" href="#third" title="Permalink to this heading">#</a></h4>
 <div class="highlight-stata notranslate"><div class="highlight"><pre><span></span>import excel <span class="s">&quot;12-Benzodiazepine lists&quot;</span>, sheet(<span class="s">&quot;Short-acting&quot;</span>)<span class="k"> clear</span>
 <span class="k">drop in</span> <span class="m">1</span><span class="o">/</span><span class="m">7</span>
 <span class="k">replace</span> A = <span class="nf">strtrim</span>(A)
@@ -606,6 +620,9 @@ import excel <span class="s">&quot;13-Nonbenzodiazepines - Z-drugs&quot;</span>,
 <span class="k">save</span> 13_nonbenzodiazepines,replace 
 </pre></div>
 </div>
+</section>
+<section id="fourth">
+<h4>1.2.4 Fourth<a class="headerlink" href="#fourth" title="Permalink to this heading">#</a></h4>
 <div class="highlight-stata notranslate"><div class="highlight"><pre><span></span>import excel <span class="s">&quot;14-Ergoloid Mesylates&quot;</span>, sheet(<span class="s">&quot;De-duplicated_results&quot;</span>)<span class="k"> clear</span>
 <span class="k">drop in</span> <span class="m">1</span><span class="o">/</span><span class="m">7</span>
 <span class="k">replace</span> A = <span class="nf">strtrim</span>(A)
@@ -673,6 +690,9 @@ import excel <span class="s">&quot;19-Sulfonylureas&quot;</span>, sheet(<span cl
 <span class="k">save</span> 19_sulfonylureas,replace 
 </pre></div>
 </div>
+</section>
+<section id="five">
+<h4>1.2.5 Five<a class="headerlink" href="#five" title="Permalink to this heading">#</a></h4>
 <div class="highlight-stata notranslate"><div class="highlight"><pre><span></span>import excel <span class="s">&quot;20-38&quot;</span>, sheet(<span class="s">&quot;20.Proton_Pump_Inhibitors&quot;</span>)<span class="k"> clear</span>
 <span class="k">drop in</span> <span class="m">1</span><span class="o">/</span><span class="m">1</span>
 <span class="k">replace</span> A = <span class="nf">strtrim</span>(A)
@@ -795,98 +815,10 @@ import excel <span class="s">&quot;20-38&quot;</span>, sheet(<span class="s">&qu
 <span class="k">save</span> 30_antiepileptics,replace 
 </pre></div>
 </div>
-<div class="highlight-stata notranslate"><div class="highlight"><pre><span></span>import excel <span class="s">&quot;20-38&quot;</span>, sheet(<span class="s">&quot;31.antiemetics&quot;</span>)<span class="k"> clear</span>
-<span class="k">drop in</span> <span class="m">1</span><span class="o">/</span><span class="m">1</span>
-<span class="k">replace</span> A = <span class="nf">strtrim</span>(A)
-<span class="k">replace</span> A=<span class="nf">ustrupper</span>(A)
-<span class="k">rename</span> A drug_gnn
-<span class="k">gen</span> class_gnn=<span class="s">&quot;antieme&quot;</span>
-<span class="k">keep</span> <span class="o">*</span>_gnn
-<span class="k">keep if</span> <span class="o">!</span><span class="nf">missing</span>(drug)
-<span class="k">gen</span> group=<span class="m">31</span>
-<span class="k">save</span> 31_antiemetics,replace 
-
-import excel <span class="s">&quot;20-38&quot;</span>, sheet(<span class="s">&quot;32.NSAIDS&quot;</span>)<span class="k"> clear</span>
-<span class="k">drop in</span> <span class="m">1</span><span class="o">/</span><span class="m">1</span>
-<span class="k">replace</span> A = <span class="nf">strtrim</span>(A)
-<span class="k">replace</span> A=<span class="nf">ustrupper</span>(A)
-<span class="k">rename</span> A drug_gnn 
-<span class="k">gen</span> class_gnn=<span class="s">&quot;nsaid&quot;</span>
-<span class="k">keep</span> <span class="o">*</span>_gnn
-<span class="k">keep if</span> <span class="o">!</span><span class="nf">missing</span>(drug)
-<span class="k">gen</span> group=<span class="m">32</span>
-<span class="k">save</span> 32_nsaids,replace 
-
-import excel <span class="s">&quot;20-38&quot;</span>, sheet(<span class="s">&quot;33.Diuretics&quot;</span>)<span class="k"> clear</span>
-<span class="k">drop in</span> <span class="m">1</span><span class="o">/</span><span class="m">1</span>
-<span class="k">replace</span> A = <span class="nf">strtrim</span>(A)
-<span class="k">replace</span> A=<span class="nf">ustrupper</span>(A)
-<span class="k">rename</span> A drug_gnn
-<span class="k">gen</span> class_gnn=<span class="s">&quot;diuretics&quot;</span>
-<span class="k">keep</span> <span class="o">*</span>_gnn
-<span class="k">keep if</span> <span class="o">!</span><span class="nf">missing</span>(drug)
-<span class="k">gen</span> group=<span class="m">33</span>
-<span class="k">save</span> 33_diuretics,replace 
-
-import excel <span class="s">&quot;20-38&quot;</span>, sheet(<span class="s">&quot;34.SNRIs&quot;</span>)<span class="k"> clear</span>
-<span class="k">drop in</span> <span class="m">1</span><span class="o">/</span><span class="m">1</span>
-<span class="k">replace</span> A = <span class="nf">strtrim</span>(A)
-<span class="k">replace</span> A=<span class="nf">ustrupper</span>(A)
-<span class="k">rename</span> A drug_gnn
-<span class="k">gen</span> class_gnn=<span class="s">&quot;snri&quot;</span>
-<span class="k">keep</span> <span class="o">*</span>_gnn
-<span class="k">keep if</span> <span class="o">!</span><span class="nf">missing</span>(drug)
-<span class="k">gen</span> group=<span class="m">34</span>
-<span class="k">save</span> 34_snri,replace 
-
-import excel <span class="s">&quot;20-38&quot;</span>, sheet(<span class="s">&quot;35.SSRIs&quot;</span>)<span class="k"> clear</span>
-<span class="k">drop in</span> <span class="m">1</span><span class="o">/</span><span class="m">1</span>
-<span class="k">replace</span> A = <span class="nf">strtrim</span>(A)
-<span class="k">replace</span> A=<span class="nf">ustrupper</span>(A)
-<span class="k">rename</span> A drug_gnn
-<span class="k">gen</span> class_gnn=<span class="s">&quot;ssri&quot;</span>
-<span class="k">keep</span> <span class="o">*</span>_gnn
-<span class="k">keep if</span> <span class="o">!</span><span class="nf">missing</span>(drug)
-<span class="k">gen</span> group=<span class="m">35</span>
-<span class="k">save</span> 35_ssri,replace 
-
-import excel <span class="s">&quot;20-38&quot;</span>, sheet(<span class="s">&quot;36.RAS Inhibitor&quot;</span>)<span class="k"> clear</span>
-<span class="k">drop in</span> <span class="m">1</span><span class="o">/</span><span class="m">2</span>
-<span class="k">replace</span> A = <span class="nf">strtrim</span>(A)
-<span class="k">replace</span> A=<span class="nf">ustrupper</span>(A)
-<span class="k">rename</span> A drug_gnn
-<span class="k">gen</span> class_gnn=<span class="s">&quot;ras&quot;</span>
-<span class="k">keep</span> <span class="o">*</span>_gnn
-<span class="k">keep if</span> <span class="o">!</span><span class="nf">missing</span>(drug)
-<span class="k">gen</span> group=<span class="m">36</span>
-<span class="k">save</span> 36_rasinhibitors,replace 
-
-import excel <span class="s">&quot;20-38&quot;</span>, sheet(<span class="s">&quot;37.Opioids&quot;</span>)<span class="k"> clear</span>
-<span class="k">drop in</span> <span class="m">1</span><span class="o">/</span><span class="m">1</span>
-<span class="k">replace</span> A = <span class="nf">strtrim</span>(A)
-<span class="k">replace</span> A=<span class="nf">ustrupper</span>(A)
-<span class="k">rename</span> A drug_gnn
-<span class="k">gen</span> class_gnn=<span class="s">&quot;opioids&quot;</span>
-<span class="k">keep</span> <span class="o">*</span>_gnn
-<span class="k">keep if</span> <span class="o">!</span><span class="nf">missing</span>(drug)
-<span class="k">gen</span> group=<span class="m">37</span>
-<span class="k">save</span> 37_opioids,replace 
-
-import excel <span class="s">&quot;20-38&quot;</span>, sheet(<span class="s">&quot;38.Anticholinergic&quot;</span>)<span class="k"> clear</span>
-<span class="k">drop in</span> <span class="m">1</span><span class="o">/</span><span class="m">1</span>
-<span class="k">replace</span> A = <span class="nf">strtrim</span>(A)
-<span class="k">replace</span> A=<span class="nf">ustrupper</span>(A)
-<span class="k">rename</span> A drug_gnn
-<span class="k">gen</span> class_gnn=<span class="s">&quot;antich&quot;</span>
-<span class="k">keep</span> <span class="o">*</span>_gnn
-<span class="k">keep if</span> <span class="o">!</span><span class="nf">missing</span>(drug)
-<span class="k">gen</span> group=<span class="m">38</span>
-<span class="k">save</span> 38_anticholinergics,replace 
-</pre></div>
-</div>
 </section>
-<section id="dofiles">
-<h4>1.2 dofiles<a class="headerlink" href="#dofiles" title="Permalink to this heading">#</a></h4>
+</section>
+<section id="append">
+<h3>1.3 Append<a class="headerlink" href="#append" title="Permalink to this heading">#</a></h3>
 <div class="highlight-stata notranslate"><div class="highlight"><pre><span></span><span class="k"> clear</span>
 <span class="k">   use</span>       01_antihistamines
 <span class="k">append</span> using 02_antiparkinsons
@@ -949,6 +881,9 @@ export delimited using <span class="s">&quot;</span><span class="nv">`i&#39;</sp
 	
 </pre></div>
 </div>
+</section>
+<section id="create">
+<h3>1.4 Create<a class="headerlink" href="#create" title="Permalink to this heading">#</a></h3>
 <div class="highlight-stata notranslate"><div class="highlight"><pre><span></span><span class="k">clear</span>
 <span class="k">set</span> obs <span class="m">1012</span>
 <span class="k">gen</span> v1=<span class="s">&quot;antiinfect&quot;</span>
@@ -964,9 +899,9 @@ export delimited using <span class="s">&quot;05_antiinfective.txt&quot;</span>, 
 </section>
 </section>
 <section id="usrds">
-<h3>2. usrds<a class="headerlink" href="#usrds" title="Permalink to this heading">#</a></h3>
-<section id="id2">
-<h4>2.1. dofiles<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h4>
+<h2>2. USRDS<a class="headerlink" href="#usrds" title="Permalink to this heading">#</a></h2>
+<section id="dofiles">
+<h3>2.1. dofiles<a class="headerlink" href="#dofiles" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><a class="reference external" href="https://raw.githubusercontent.com/jhutrc/criteria/main/01_antihistamines_expR.do">dofile1</a></p></li>
 <li><p><a class="reference external" href="https://raw.githubusercontent.com/jhutrc/criteria/main/02_antiparkinsons_expR.do">dofile2</a></p></li>
@@ -1009,7 +944,7 @@ export delimited using <span class="s">&quot;05_antiinfective.txt&quot;</span>, 
 </ul>
 </section>
 <section id="queue">
-<h4>2.2. queue<a class="headerlink" href="#queue" title="Permalink to this heading">#</a></h4>
+<h3>2.2. Queue<a class="headerlink" href="#queue" title="Permalink to this heading">#</a></h3>
 <div class="highlight-stata notranslate"><div class="highlight"><pre><span></span><span class="k">do</span>  01_antihistamines_expR<span class="m">.</span>do
 <span class="k">do</span>  02_antiparkinsons_expR<span class="m">.</span>do
 <span class="k">do</span>  03_antispasmodics_expR<span class="m">.</span>do
@@ -1052,7 +987,7 @@ export delimited using <span class="s">&quot;05_antiinfective.txt&quot;</span>, 
 </div>
 </section>
 <section id="exposure">
-<h4>2.3. exposure<a class="headerlink" href="#exposure" title="Permalink to this heading">#</a></h4>
+<h3>2.3. Exposure<a class="headerlink" href="#exposure" title="Permalink to this heading">#</a></h3>
 <div class="highlight-stata notranslate"><div class="highlight"><pre><span></span><span class="k">                     use</span> 01_antihistamines_expR<span class="m">.</span>dta,clear 
 <span class="k">merge m</span>:m usrds_id using 02_antiparkinsons_expR<span class="m">.</span>dta,keep(matched) nogen
 <span class="k">merge m</span>:m usrds_id using 03_antispasmodics_expR<span class="m">.</span>dta,keep(matched) nogen
@@ -1139,7 +1074,7 @@ export delimited using <span class="s">&quot;05_antiinfective.txt&quot;</span>, 
 </section>
 </section>
 <section id="classes">
-<h3>3 classes<a class="headerlink" href="#classes" title="Permalink to this heading">#</a></h3>
+<h2>3 Classes<a class="headerlink" href="#classes" title="Permalink to this heading">#</a></h2>
 <div class="highlight-stata notranslate"><div class="highlight"><pre><span></span><span class="k">qui</span> {
 <span class="k">	qui</span> {
 <span class="k">		clear</span>
@@ -1328,7 +1263,7 @@ export delimited using <span class="s">&quot;05_antiinfective.txt&quot;</span>, 
 </pre></div>
 </div>
 <section id="eligibility">
-<h4>3.11 eligibility<a class="headerlink" href="#eligibility" title="Permalink to this heading">#</a></h4>
+<h3>3.1 Eligibility<a class="headerlink" href="#eligibility" title="Permalink to this heading">#</a></h3>
 <div class="highlight-stata notranslate"><div class="highlight"><pre><span></span><span class="k">qui</span> {
 <span class="k">	qui</span> {
 <span class="k">	    clear</span> 
@@ -1372,7 +1307,7 @@ export delimited using <span class="s">&quot;05_antiinfective.txt&quot;</span>, 
 </div>
 </section>
 <section id="employ">
-<h4>3.12 employ<a class="headerlink" href="#employ" title="Permalink to this heading">#</a></h4>
+<h3>3.2 Employ<a class="headerlink" href="#employ" title="Permalink to this heading">#</a></h3>
 <div class="highlight-stata notranslate"><div class="highlight"><pre><span></span><span class="k">qui</span> {
 <span class="k">	qui</span> {
 <span class="k">		clear</span> 
@@ -1438,7 +1373,7 @@ export delimited using <span class="s">&quot;05_antiinfective.txt&quot;</span>, 
 </div>
 </section>
 <section id="medev">
-<h4>3.13 medev<a class="headerlink" href="#medev" title="Permalink to this heading">#</a></h4>
+<h3>3.3 Medev<a class="headerlink" href="#medev" title="Permalink to this heading">#</a></h3>
 <div class="highlight-stata notranslate"><div class="highlight"><pre><span></span><span class="k">qui</span> {
 <span class="k">    qui</span> {
 <span class="k">		clear</span> 
@@ -1504,7 +1439,7 @@ export delimited using <span class="s">&quot;05_antiinfective.txt&quot;</span>, 
 </div>
 </section>
 <section id="patients">
-<h4>3.14 patients<a class="headerlink" href="#patients" title="Permalink to this heading">#</a></h4>
+<h3>3.4 Patients<a class="headerlink" href="#patients" title="Permalink to this heading">#</a></h3>
 <div class="highlight-stata notranslate"><div class="highlight"><pre><span></span><span class="k">qui</span> {
 <span class="k">	qui</span> {
 		cls
@@ -1594,7 +1529,7 @@ export delimited using <span class="s">&quot;05_antiinfective.txt&quot;</span>, 
 </div>
 </section>
 <section id="innovation">
-<h4>3.15 innovation<a class="headerlink" href="#innovation" title="Permalink to this heading">#</a></h4>
+<h3>3.5 Innovation<a class="headerlink" href="#innovation" title="Permalink to this heading">#</a></h3>
 <div class="highlight-stata notranslate"><div class="highlight"><pre><span></span><span class="k">qui</span> {
 <span class="k">	qui</span> {
 <span class="k">		if</span> _N { <span class="c1">//only works as part of a queue</span>
@@ -1632,72 +1567,7 @@ export delimited using <span class="s">&quot;05_antiinfective.txt&quot;</span>, 
 </section>
 </section>
 <section id="cohort">
-<h3>4. cohort<a class="headerlink" href="#cohort" title="Permalink to this heading">#</a></h3>
-<div class="highlight-stata notranslate"><div class="highlight"><pre><span></span><span class="k">timer on</span> <span class="m">4</span>
-<span class="k">use</span>                      12_employR,clear
-<span class="k">merge m</span>:m usrds_id using 13_medevR,keep(matched) nogen
-<span class="k">merge m</span>:m usrds_id using 15_tvarR,<span class="k"> keep</span>(matched) nogen
-<span class="k">keep if</span> <span class="nf">inrange</span>(first_se<span class="m">+91</span>,begdate,enddate)
-<span class="k">drop if</span> entry<span class="o">&lt;</span>first_se
-<span class="k">replace</span> end_death=<span class="m">0</span><span class="k"> if</span> vis<span class="o">!=</span>vis_N
-<span class="k">sort</span> usrds_id srvc_dt
-<span class="k">duplicates drop</span> usrds_id entry<span class="k"> exit</span>,force
-<span class="k">label</span> variable age_dem <span class="s">&quot;Age, median years [IQR]&quot;</span>
-<span class="k">label</span> variable bmi_comb <span class="s">&quot;BMI, kg/m2 [IQR]&quot;</span>
-<span class="k">label</span> variable female_dem <span class="s">&quot;Male&quot;</span>
-<span class="k">label</span> variable white_dem <span class="s">&quot;White&quot;</span>
-<span class="k">label</span> variable hisp_dem <span class="s">&quot;Hispanic&quot;</span>
-<span class="k">label</span> variable black_dem <span class="s">&quot;Black&quot;</span>
-<span class="k">label</span> variable asian_dem <span class="s">&quot;Asian&quot;</span>
-<span class="k">label</span> variable other_dem <span class="s">&quot;Other&quot;</span>
-<span class="k">label</span> variable benzo_rx <span class="s">&quot;Benzo&quot;</span>
-<span class="k">label</span> variable opioids_rx <span class="s">&quot;Opioids&quot;</span> 
-<span class="k">label</span> variable antidep <span class="s">&quot;Antidepressant&quot;</span>
-<span class="k">label</span> variable muscle_rx <span class="s">&quot;Muscle Relaxants&quot;</span>
-<span class="k">label</span> variable antipsy_rx <span class="s">&quot;Antipsychotics&quot;</span>
-<span class="k">label</span> variable dm <span class="s">&quot;Diabetes&quot;</span>
-<span class="k">label</span> variable cvd <span class="s">&quot;Cardiovascular Disease&quot;</span> 
-<span class="k">label</span> variable pvd <span class="s">&quot;Peripheral Vascular Disease&quot;</span>
-<span class="k">label</span> variable htn <span class="s">&quot;Hypertension&quot;</span> 
-<span class="k">label</span> variable copd <span class="s">&quot;Chronic Obstructive Pulmonary Disease&quot;</span>
-<span class="k">label</span> variable smoke <span class="s">&quot;Tobacco Use&quot;</span>
-<span class="k">label</span> variable ca_ <span class="s">&quot;Cancer&quot;</span> 
-<span class="k">label</span> variable drug <span class="s">&quot;Drug Use&quot;</span>
-<span class="k">label</span> variable walk <span class="s">&quot;Inability to Ambulate&quot;</span>
-<span class="k">label</span> variable inst <span class="s">&quot;Institutionalized&quot;</span>
-<span class="k">label</span> variable healthy_comb <span class="s">&quot;No Comorbidity&quot;</span>
-<span class="k">label</span> variable cause_dm <span class="s">&quot;Diabetes&quot;</span>
-<span class="k">label</span> variable cause_htn <span class="s">&quot;Hypertensive Renal Disease&quot;</span>
-<span class="k">label</span> variable cause_gn <span class="s">&quot;GN&quot;</span> 
-<span class="k">label</span> variable cause_oth <span class="s">&quot;Other&quot;</span> 
-<span class="k">label</span> variable dualelig <span class="s">&quot;Dual Eligible&quot;</span>
-<span class="k">label</span> variable un_ <span class="s">&quot;Unemployed&quot;</span> 
-<span class="k">label</span> variable ft_ <span class="s">&quot;Full-time&quot;</span>
-<span class="k">label</span> variable pt_ <span class="s">&quot;Part-time&quot;</span>
-<span class="k">label</span> variable rt_ <span class="s">&quot;Retired&quot;</span>
-<span class="k">label</span> variable di_ <span class="s">&quot;Disabled&quot;</span>
-<span class="k">label</span> variable ot_emp <span class="s">&quot;Other&quot;</span>
-<span class="k">label</span> variable neweng <span class="s">&quot;New England&quot;</span>
-<span class="k">label</span> variable mideast <span class="s">&quot;Midwest&quot;</span>
-<span class="k">label</span> variable great <span class="s">&quot;Greatlakes&quot;</span> 
-<span class="k">label</span> variable plains <span class="s">&quot;Plains&quot;</span> 
-<span class="k">label</span> variable southe <span class="s">&quot;Southeast&quot;</span>
-<span class="k">label</span> variable southw <span class="s">&quot;Southwest&quot;</span>
-<span class="k">label</span> variable rocky <span class="s">&quot;Rocky&quot;</span>
-<span class="k">label</span> variable farw <span class="s">&quot;Farwest&quot;</span>
-<span class="k">gen</span> year=<span class="nf">year</span>(srvc_dt)
-<span class="k">gen</span> month=<span class="nf">month</span>(srvc_dt)
-<span class="k">gen window</span>=<span class="nf">ym</span>(year,month)
-<span class="k">compress</span>
-<span class="k">save</span> 16_cohortR,replace
-<span class="k">timer</span> off <span class="m">4</span> 
-<span class="k">timer list</span> 
-<span class="k">timer clear</span> 
-</pre></div>
-</div>
-</section>
-<section id="baseline">
-<h3>4.1 baseline<a class="headerlink" href="#baseline" title="Permalink to this heading">#</a></h3>
+<h2>4. Cohort<a class="headerlink" href="#cohort" title="Permalink to this heading">#</a></h2>
 <div class="highlight-stata notranslate"><div class="highlight"><pre><span></span><span class="k">timer on</span> <span class="m">4</span>
 <span class="k">use</span>                      12_employR,clear
 <span class="k">merge m</span>:m usrds_id using 13_medevR,keep(matched) nogen
@@ -1761,7 +1631,7 @@ export delimited using <span class="s">&quot;05_antiinfective.txt&quot;</span>, 
 </pre></div>
 </div>
 <section id="curate">
-<h4>4.2 curate<a class="headerlink" href="#curate" title="Permalink to this heading">#</a></h4>
+<h3>4.2 Curate<a class="headerlink" href="#curate" title="Permalink to this heading">#</a></h3>
 <div class="highlight-stata notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="m">0</span> { <span class="c1">//warning: runtime=52min!!</span>
 <span class="k">use</span> 16_cohortR,clear
 <span class="k">collapse</span> (max) <span class="o">*</span>_rx ,by(usrds_id)
@@ -1822,7 +1692,7 @@ putexcel<span class="k"> set</span> 17_classR,modify
 </div>
 </section>
 <section id="postfile">
-<h4>4.3 postfile<a class="headerlink" href="#postfile" title="Permalink to this heading">#</a></h4>
+<h3>4.3 Postfile<a class="headerlink" href="#postfile" title="Permalink to this heading">#</a></h3>
 <div class="highlight-stata notranslate"><div class="highlight"><pre><span></span><span class="c1">//scenarios</span>
 <span class="k">postutil dir</span>
 <span class="k">postutil clear</span>
@@ -1863,8 +1733,8 @@ putexcel<span class="k"> set</span> 17_classR,modify
 </pre></div>
 </div>
 </section>
-<section id="id3">
-<h4>4.4 baseline<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h4>
+<section id="phenotypes">
+<h3>4.4 Phenotypes<a class="headerlink" href="#phenotypes" title="Permalink to this heading">#</a></h3>
 <div class="highlight-stata notranslate"><div class="highlight"><pre><span></span><span class="c1">//4</span>
 <span class="k">gen</span> scenario4=s0<span class="o">^</span><span class="nf">exp</span>(_b[age_dem]<span class="o">*</span><span class="m">75</span><span class="o">+</span>_b[antihist_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[antipark_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[antispasm_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[antithromb_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[antiinfect_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[pera1block_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[cena1ag_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[otha1ag_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[antidep_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[antipsy_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[barb_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[benzo_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[nonbenzo_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[ergot_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[andro_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[estro_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[growth_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[insulin_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[urea_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[ppi_rx]<span class="o">*</span><span class="m">1</span><span class="o">+</span>_b[nsnsaid_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[muscle_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[ccb_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[thiazo_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[achblock_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[a1block_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[tca_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[steroids_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[h2ant_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[antiepi_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[antieme_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[nsaid_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[diuretics_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[snri_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[ssri_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[ras_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[opioids_rx]<span class="o">*</span><span class="m">1</span><span class="o">+</span>_b[antich_rx]<span class="o">*</span><span class="m">0</span>)
 <span class="k">replace</span> scenario4=(<span class="m">1</span><span class="o">-</span>scenario4)<span class="o">*</span><span class="m">100</span>
@@ -1912,9 +1782,8 @@ putexcel<span class="k"> set</span> 17_classR,modify
 </pre></div>
 </div>
 </section>
-</section>
-<section id="filler">
-<h3>5.01 filler<a class="headerlink" href="#filler" title="Permalink to this heading">#</a></h3>
+<section id="risk">
+<h3>4.6 Risk<a class="headerlink" href="#risk" title="Permalink to this heading">#</a></h3>
 <div class="highlight-stata notranslate"><div class="highlight"><pre><span></span><span class="c1">//8</span>
 <span class="k">gen</span> scenario8=s0<span class="o">^</span><span class="nf">exp</span>(_b[age_dem]<span class="o">*</span><span class="m">75</span><span class="o">+</span>_b[antihist_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[antipark_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[antispasm_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[antithromb_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[antiinfect_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[pera1block_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[cena1ag_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[otha1ag_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[antidep_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[antipsy_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[barb_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[benzo_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[nonbenzo_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[ergot_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[andro_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[estro_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[growth_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[insulin_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[urea_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[ppi_rx]<span class="o">*</span><span class="m">1</span><span class="o">+</span>_b[nsnsaid_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[muscle_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[ccb_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[thiazo_rx]<span class="o">*</span><span class="m">1</span><span class="o">+</span>_b[achblock_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[a1block_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[tca_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[steroids_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[h2ant_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[antiepi_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[antieme_rx]<span class="o">*</span><span class="m">1</span><span class="o">+</span>_b[nsaid_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[diuretics_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[snri_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[ssri_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[ras_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[opioids_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[antich_rx]<span class="o">*</span><span class="m">0</span>)
 <span class="k">replace</span> scenario8=(<span class="m">1</span><span class="o">-</span>scenario8)<span class="o">*</span><span class="m">100</span>
@@ -1950,8 +1819,8 @@ putexcel<span class="k"> set</span> 17_classR,modify
 </pre></div>
 </div>
 </section>
-<section id="preserve">
-<h3>5.1 preserve<a class="headerlink" href="#preserve" title="Permalink to this heading">#</a></h3>
+<section id="score">
+<h3>4.7 Score<a class="headerlink" href="#score" title="Permalink to this heading">#</a></h3>
 <div class="highlight-stata notranslate"><div class="highlight"><pre><span></span><span class="c1">//11</span>
 <span class="k">gen</span> scenario11=s0<span class="o">^</span><span class="nf">exp</span>(_b[age_dem]<span class="o">*</span><span class="m">75</span><span class="o">+</span>_b[antihist_rx]<span class="o">*</span><span class="m">1</span><span class="o">+</span>_b[antipark_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[antispasm_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[antithromb_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[antiinfect_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[pera1block_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[cena1ag_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[otha1ag_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[antidep_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[antipsy_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[barb_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[benzo_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[nonbenzo_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[ergot_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[andro_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[estro_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[growth_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[insulin_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[urea_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[ppi_rx]<span class="o">*</span><span class="m">1</span><span class="o">+</span>_b[nsnsaid_rx]<span class="o">*</span><span class="m">1</span><span class="o">+</span>_b[muscle_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[ccb_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[thiazo_rx]<span class="o">*</span><span class="m">1</span><span class="o">+</span>_b[achblock_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[a1block_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[tca_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[steroids_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[h2ant_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[antiepi_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[antieme_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[nsaid_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[diuretics_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[snri_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[ssri_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[ras_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[opioids_rx]<span class="o">*</span><span class="m">0</span><span class="o">+</span>_b[antich_rx]<span class="o">*</span><span class="m">0</span>)
 <span class="k">replace</span> scenario11=(<span class="m">1</span><span class="o">-</span>scenario11)<span class="o">*</span><span class="m">100</span>
@@ -1980,8 +1849,9 @@ putexcel<span class="k"> set</span> 17_classR,modify
 </pre></div>
 </div>
 </section>
+</section>
 <section id="labels">
-<h3>5.2 labels<a class="headerlink" href="#labels" title="Permalink to this heading">#</a></h3>
+<h2>5 Labels<a class="headerlink" href="#labels" title="Permalink to this heading">#</a></h2>
 <div class="highlight-stata notranslate"><div class="highlight"><pre><span></span><span class="k">collapse</span> (sum)<span class="k"> score</span> <span class="o">*</span>_rx,by(usrds_id<span class="k"> window</span>)
 <span class="k">rename</span> <span class="o">*</span>_rx dose<span class="o">*</span>_rx
 <span class="k">tempfile</span> score_dose
@@ -2100,9 +1970,8 @@ putexcel<span class="k"> set</span> 17_classR,modify
 <span class="k">save</span> 17_baselineR,replace
 </pre></div>
 </div>
-</section>
-<section id="collapse">
-<h3>5.3 collapse<a class="headerlink" href="#collapse" title="Permalink to this heading">#</a></h3>
+<section id="putexcel">
+<h3>5.1 Putexcel<a class="headerlink" href="#putexcel" title="Permalink to this heading">#</a></h3>
 <div class="highlight-stata notranslate"><div class="highlight"><pre><span></span>putexcel<span class="k"> set</span> 17_table1R,modify
 <span class="k">count if</span> pic_rx<span class="o">==</span><span class="m">1</span>
 <span class="k">local</span> pic:<span class="k"> disp</span> <span class="nf">r</span>(N) 
@@ -2194,8 +2063,8 @@ import excel <span class="s">&quot;17_classR.xlsx&quot;</span>, sheet(<span clas
 </pre></div>
 </div>
 </section>
-<section id="output">
-<h3>5.3 output<a class="headerlink" href="#output" title="Permalink to this heading">#</a></h3>
+<section id="forrest">
+<h3>5.2 Forrest<a class="headerlink" href="#forrest" title="Permalink to this heading">#</a></h3>
 <div class="highlight-stata notranslate"><div class="highlight"><pre><span></span>#delimit ;
 <span class="k">twoway</span> (rcap lb ub xaxis<span class="k"> if</span> beers<span class="o">==</span><span class="m">0</span>, 
             horizontal 
@@ -2282,7 +2151,7 @@ import excel <span class="s">&quot;17_classR.xlsx&quot;</span>, sheet(<span clas
 				<span class="m">25</span> <span class="s">&quot;Corticosteroid&quot;</span> 
 				<span class="m">23</span> <span class="s">&quot;H2 receptor antagonist&quot;</span> 
 				<span class="m">24</span> <span class="s">&quot;Antiepileptic&quot;</span> 
-				<span class="m">36</span> <span class="s">&quot;Antiemetic&quot;</span> 
+	     		<span class="m">36</span> <span class="s">&quot;Antiemetic&quot;</span> 
 				<span class="m">7</span> <span class="s">&quot;NSAID&quot;</span> 
 				<span class="m">21</span> <span class="s">&quot;Diuretic&quot;</span> 
 				<span class="m">20</span> <span class="s">&quot;SNRI&quot;</span> 
@@ -2302,10 +2171,10 @@ import excel <span class="s">&quot;17_classR.xlsx&quot;</span>, sheet(<span clas
 <span class="k">timer list</span> 
 </pre></div>
 </div>
+</section>
+<section id="twoway">
+<h3>5.3 Twoway<a class="headerlink" href="#twoway" title="Permalink to this heading">#</a></h3>
 <p><img alt="" src="_images/forrest.plot.png" /></p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
-</pre></div>
-</div>
 </section>
 </section>
 </section>
@@ -2347,7 +2216,7 @@ import excel <span class="s">&quot;17_classR.xlsx&quot;</span>, sheet(<span clas
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">flow</p>
+        <p class="prev-next-title">method</p>
       </div>
     </a>
     <a class="right-next"
@@ -2355,7 +2224,7 @@ import excel <span class="s">&quot;17_classR.xlsx&quot;</span>, sheet(<span clas
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">gradient</p>
+        <p class="prev-next-title">conclusion</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -2377,39 +2246,46 @@ import excel <span class="s">&quot;17_classR.xlsx&quot;</span>, sheet(<span clas
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#informationists">Informationists</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#raw">1. Raw</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">1.1 Excel</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#stata">1.2 Stata</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#dofiles">1.2 dofiles</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#excel">1. Excel</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#xlsx">1.1 xlsx</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#import">1.2 Import</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#first">1.2.1 First</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#second">1.2.2 Second</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#third">1.2.3 Third</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fourth">1.2.4 Fourth</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#five">1.2.5 Five</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#usrds">2. usrds</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">2.1. dofiles</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#queue">2.2. queue</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#exposure">2.3. exposure</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#append">1.3 Append</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create">1.4 Create</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#classes">3 classes</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#eligibility">3.11 eligibility</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#employ">3.12 employ</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#medev">3.13 medev</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#patients">3.14 patients</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#innovation">3.15 innovation</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#usrds">2. USRDS</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#dofiles">2.1. dofiles</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#queue">2.2. Queue</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exposure">2.3. Exposure</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cohort">4. cohort</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#baseline">4.1 baseline</a><ul class="nav section-nav flex-column">
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#curate">4.2 curate</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#postfile">4.3 postfile</a></li>
-<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">4.4 baseline</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#classes">3 Classes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#eligibility">3.1 Eligibility</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#employ">3.2 Employ</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#medev">3.3 Medev</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#patients">3.4 Patients</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#innovation">3.5 Innovation</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#filler">5.01 filler</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#preserve">5.1 preserve</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#labels">5.2 labels</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#collapse">5.3 collapse</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#output">5.3 output</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cohort">4. Cohort</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#curate">4.2 Curate</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#postfile">4.3 Postfile</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#phenotypes">4.4 Phenotypes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#risk">4.6 Risk</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#score">4.7 Score</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#labels">5 Labels</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#putexcel">5.1 Putexcel</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#forrest">5.2 Forrest</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#twoway">5.3 Twoway</a></li>
 </ul>
 </li>
 </ul>
