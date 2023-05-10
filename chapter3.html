@@ -163,6 +163,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="chapter4.html">conclusion</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chapter5.html">acknowledgements</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chapter6.html">references</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter7.html">paper</a></li>
 </ul>
 
     </div>
@@ -364,6 +365,10 @@ document.write(`
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#third">1.2.3 Third</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fourth">1.2.4 Fourth</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#five">1.2.5 Five</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sixth">1.2.6. Sixth</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#seventh">1.2.7 Seventh</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#alternative">1.2.8 Alternative</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#logfile">1.2.9. logfile</a></li>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#append">1.3 Append</a></li>
@@ -414,13 +419,16 @@ document.write(`
 <section id="excel">
 <h2>1. Excel<a class="headerlink" href="#excel" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
-<li><p>catalog</p></li>
-<li><p>import</p></li>
+<li><p>catalog 04/18/2019 - 08/01/2019</p></li>
+<li><p>import 08/10/2019 -</p></li>
 <li><p>export</p></li>
 </ul>
 <section id="xlsx">
 <h3>1.1 xlsx<a class="headerlink" href="#xlsx" title="Permalink to this heading">#</a></h3>
-<p><a class="reference external" href="https://www.dropbox.com/s/gy5ynqzvau6inl4/1-first%20gen%20antihisitamines.xlsx?dl=0">1-first gen antihisitamines</a></p>
+<ul class="simple">
+<li><p>5:43PM on 08/01/2019 by Stella
+<a class="reference external" href="https://www.dropbox.com/s/gy5ynqzvau6inl4/1-first%20gen%20antihisitamines.xlsx?dl=0">1-first gen antihisitamines</a></p></li>
+</ul>
 <p><a class="reference external" href="https://www.dropbox.com/s/4dvquqf597egvbv/2-antiparkinsonian%20agents.xlsx?dl=0">2-antiparkinsonian agents</a></p>
 <p><a class="reference external" href="https://www.dropbox.com/s/frejy31ceaenhsz/3-Antispasmodics.xlsx?dl=0">3-Antispasmodics</a></p>
 <p><a class="reference external" href="https://www.dropbox.com/s/dmu6zoicdkpbb8n/4-Antithrombotics.xlsx?dl=0">4-Antithrombotics</a></p>
@@ -439,7 +447,10 @@ document.write(`
 <p><a class="reference external" href="https://www.dropbox.com/s/bk9p1cb16cutz6u/17-Growth%20hormone.xlsx?dl=0">17-Growth hormone</a></p>
 <p><a class="reference external" href="https://www.dropbox.com/s/cxjwtyho9w07zbw/18-Insulin.xlsx?dl=0">18-Insulin</a></p>
 <p><a class="reference external" href="https://www.dropbox.com/s/9dttou8zopdefkv/19-Sulfonylureas.xlsx?dl=0">19-Sulfonylureas</a></p>
-<p><a class="reference external" href="https://www.dropbox.com/s/la3708gryt3jxiy/20-38.xlsx?dl=0">20-38</a></p>
+<ul class="simple">
+<li><p>3:11PM on 07/02/2019 by Lori
+<a class="reference external" href="https://www.dropbox.com/s/la3708gryt3jxiy/20-38.xlsx?dl=0">20-38</a></p></li>
+</ul>
 </section>
 <section id="import">
 <h3>1.2 Import<a class="headerlink" href="#import" title="Permalink to this heading">#</a></h3>
@@ -813,6 +824,388 @@ import excel <span class="s">&quot;20-38&quot;</span>, sheet(<span class="s">&qu
 <span class="k">keep if</span> <span class="o">!</span><span class="nf">missing</span>(drug)
 <span class="k">gen</span> group=<span class="m">30</span>
 <span class="k">save</span> 30_antiepileptics,replace 
+</pre></div>
+</div>
+</section>
+<section id="sixth">
+<h4>1.2.6. Sixth<a class="headerlink" href="#sixth" title="Permalink to this heading">#</a></h4>
+<div class="highlight-stata notranslate"><div class="highlight"><pre><span></span>import excel <span class="s">&quot;20-38&quot;</span>, sheet(<span class="s">&quot;31.antiemetics&quot;</span>)<span class="k"> clear</span>
+<span class="k">drop in</span> <span class="m">1</span><span class="o">/</span><span class="m">1</span>
+<span class="k">replace</span> A = <span class="nf">strtrim</span>(A)
+<span class="k">replace</span> A=<span class="nf">ustrupper</span>(A)
+<span class="k">rename</span> A drug_gnn
+<span class="k">gen</span> class_gnn=<span class="s">&quot;antieme&quot;</span>
+<span class="k">keep</span> <span class="o">*</span>_gnn
+<span class="k">keep if</span> <span class="o">!</span><span class="nf">missing</span>(drug)
+<span class="k">gen</span> group=<span class="m">31</span>
+<span class="k">save</span> 31_antiemetics,replace 
+
+import excel <span class="s">&quot;20-38&quot;</span>, sheet(<span class="s">&quot;32.NSAIDS&quot;</span>)<span class="k"> clear</span>
+<span class="k">drop in</span> <span class="m">1</span><span class="o">/</span><span class="m">1</span>
+<span class="k">replace</span> A = <span class="nf">strtrim</span>(A)
+<span class="k">replace</span> A=<span class="nf">ustrupper</span>(A)
+<span class="k">rename</span> A drug_gnn 
+<span class="k">gen</span> class_gnn=<span class="s">&quot;nsaid&quot;</span>
+<span class="k">keep</span> <span class="o">*</span>_gnn
+<span class="k">keep if</span> <span class="o">!</span><span class="nf">missing</span>(drug)
+<span class="k">gen</span> group=<span class="m">32</span>
+<span class="k">save</span> 32_nsaids,replace 
+
+import excel <span class="s">&quot;20-38&quot;</span>, sheet(<span class="s">&quot;33.Diuretics&quot;</span>)<span class="k"> clear</span>
+<span class="k">drop in</span> <span class="m">1</span><span class="o">/</span><span class="m">1</span>
+<span class="k">replace</span> A = <span class="nf">strtrim</span>(A)
+<span class="k">replace</span> A=<span class="nf">ustrupper</span>(A)
+<span class="k">rename</span> A drug_gnn
+<span class="k">gen</span> class_gnn=<span class="s">&quot;diuretics&quot;</span>
+<span class="k">keep</span> <span class="o">*</span>_gnn
+<span class="k">keep if</span> <span class="o">!</span><span class="nf">missing</span>(drug)
+<span class="k">gen</span> group=<span class="m">33</span>
+<span class="k">save</span> 33_diuretics,replace 
+
+import excel <span class="s">&quot;20-38&quot;</span>, sheet(<span class="s">&quot;34.SNRIs&quot;</span>)<span class="k"> clear</span>
+<span class="k">drop in</span> <span class="m">1</span><span class="o">/</span><span class="m">1</span>
+<span class="k">replace</span> A = <span class="nf">strtrim</span>(A)
+<span class="k">replace</span> A=<span class="nf">ustrupper</span>(A)
+<span class="k">rename</span> A drug_gnn
+<span class="k">gen</span> class_gnn=<span class="s">&quot;snri&quot;</span>
+<span class="k">keep</span> <span class="o">*</span>_gnn
+<span class="k">keep if</span> <span class="o">!</span><span class="nf">missing</span>(drug)
+<span class="k">gen</span> group=<span class="m">34</span>
+<span class="k">save</span> 34_snri,replace 
+
+import excel <span class="s">&quot;20-38&quot;</span>, sheet(<span class="s">&quot;35.SSRIs&quot;</span>)<span class="k"> clear</span>
+<span class="k">drop in</span> <span class="m">1</span><span class="o">/</span><span class="m">1</span>
+<span class="k">replace</span> A = <span class="nf">strtrim</span>(A)
+<span class="k">replace</span> A=<span class="nf">ustrupper</span>(A)
+<span class="k">rename</span> A drug_gnn
+<span class="k">gen</span> class_gnn=<span class="s">&quot;ssri&quot;</span>
+<span class="k">keep</span> <span class="o">*</span>_gnn
+<span class="k">keep if</span> <span class="o">!</span><span class="nf">missing</span>(drug)
+<span class="k">gen</span> group=<span class="m">35</span>
+<span class="k">save</span> 35_ssri,replace 
+</pre></div>
+</div>
+</section>
+<section id="seventh">
+<h4>1.2.7 Seventh<a class="headerlink" href="#seventh" title="Permalink to this heading">#</a></h4>
+<div class="highlight-stata notranslate"><div class="highlight"><pre><span></span>import excel <span class="s">&quot;20-38&quot;</span>, sheet(<span class="s">&quot;36.RAS Inhibitor&quot;</span>)<span class="k"> clear</span>
+<span class="k">drop in</span> <span class="m">1</span><span class="o">/</span><span class="m">2</span>
+<span class="k">replace</span> A = <span class="nf">strtrim</span>(A)
+<span class="k">replace</span> A=<span class="nf">ustrupper</span>(A)
+<span class="k">rename</span> A drug_gnn
+<span class="k">gen</span> class_gnn=<span class="s">&quot;ras&quot;</span>
+<span class="k">keep</span> <span class="o">*</span>_gnn
+<span class="k">keep if</span> <span class="o">!</span><span class="nf">missing</span>(drug)
+<span class="k">gen</span> group=<span class="m">36</span>
+<span class="k">save</span> 36_rasinhibitors,replace 
+
+import excel <span class="s">&quot;20-38&quot;</span>, sheet(<span class="s">&quot;37.Opioids&quot;</span>)<span class="k"> clear</span>
+<span class="k">drop in</span> <span class="m">1</span><span class="o">/</span><span class="m">1</span>
+<span class="k">replace</span> A = <span class="nf">strtrim</span>(A)
+<span class="k">replace</span> A=<span class="nf">ustrupper</span>(A)
+<span class="k">rename</span> A drug_gnn
+<span class="k">gen</span> class_gnn=<span class="s">&quot;opioids&quot;</span>
+<span class="k">keep</span> <span class="o">*</span>_gnn
+<span class="k">keep if</span> <span class="o">!</span><span class="nf">missing</span>(drug)
+<span class="k">gen</span> group=<span class="m">37</span>
+<span class="k">save</span> 37_opioids,replace 
+
+import excel <span class="s">&quot;20-38&quot;</span>, sheet(<span class="s">&quot;38.Anticholinergic&quot;</span>)<span class="k"> clear</span>
+<span class="k">drop in</span> <span class="m">1</span><span class="o">/</span><span class="m">1</span>
+<span class="k">replace</span> A = <span class="nf">strtrim</span>(A)
+<span class="k">replace</span> A=<span class="nf">ustrupper</span>(A)
+<span class="k">rename</span> A drug_gnn
+<span class="k">gen</span> class_gnn=<span class="s">&quot;antich&quot;</span>
+<span class="k">keep</span> <span class="o">*</span>_gnn
+<span class="k">keep if</span> <span class="o">!</span><span class="nf">missing</span>(drug)
+<span class="k">gen</span> group=<span class="m">38</span>
+<span class="k">save</span> 38_anticholinergics,replace 
+</pre></div>
+</div>
+</section>
+<section id="alternative">
+<h4>1.2.8 Alternative<a class="headerlink" href="#alternative" title="Permalink to this heading">#</a></h4>
+<ul class="simple">
+<li><p>One script that achieves 1.2.1 - 1.2.7</p></li>
+<li><p>Inspired by ph.340.600 &amp; ph.340.700</p></li>
+<li><p>Reduces lines of code from 440 - 182</p></li>
+<li><p>Supposedly improves:</p>
+<ul>
+<li><p>legibility</p></li>
+<li><p>generalizability</p></li>
+<li><p>quality of life</p></li>
+</ul>
+</li>
+</ul>
+<div class="highlight-stata notranslate"><div class="highlight"><pre><span></span><span class="k">qui</span> {
+<span class="k">	qui</span> {
+<span class="k">		clear</span>
+		cls
+<span class="k">		if</span> <span class="nf">c</span>(N) { <span class="c1">//background</span>
+			we compiled a comprehensive<span class="k"> list</span> of medications within 
+			each of the potentially inapporpriate medication (pim) 
+			classes<span class="k"> in</span> a systematic manner.
+			
+			first, informaticists used micromedex, the control vocabularies of            medline and embase, and medication websites to<span class="k"> generate</span> 
+			a trade and generic medication name<span class="k"> list</span>. 
+			
+			second, this<span class="k"> list</span> was curated to allow medications with multiple
+            mechanisms of action to be represented<span class="k"> in more</span> than<span class="k"> one</span> pim<span class="k"> class</span>.
+			we removed pims with topical or ocular routes of administration. 
+			
+			the final<span class="k"> list</span> was <span class="o">**</span>imported into stata<span class="o">**</span> to<span class="k"> query</span> 
+			medicare part<span class="k"> d</span> claims<span class="k"> for</span> pims...
+		} 
+<span class="k">		if</span> <span class="nf">c</span>(N)<span class="o">&lt;</span><span class="m">1</span> { <span class="c1">//methods</span>
+<span class="k">		    global</span> workdir <span class="nv">`c(pwd)&#39;</span> 
+<span class="k">			if</span> <span class="nf">c</span>(os)<span class="o">==</span><span class="s">&quot;Windows&quot;</span> {
+<span class="k">				global</span> workdir <span class="s">&quot;</span><span class="vg">$workdir</span><span class="se">\&quot;</span>
+			}
+<span class="k">			else</span> {
+<span class="k">				global</span> workdir <span class="s">&quot;</span><span class="vg">$workdir</span><span class="s">/&quot;</span>
+			}
+			#delimit ;
+<span class="k">			global</span> catalog1
+			    <span class="s">&quot;1-first gen antihisitamines&quot;</span>
+				<span class="s">&quot;2-antiparkinsonian agents&quot;</span>
+				<span class="s">&quot;3-Antispasmodics&quot;</span>
+				<span class="s">&quot;4-Antithrombotics&quot;</span>
+				<span class="s">&quot;5-antiinfective agents&quot;</span>
+				<span class="s">&quot;6-Peripheral alpha-1 blockers&quot;</span>
+				<span class="s">&quot;7-Central alpha-agonists&quot;</span>
+				<span class="s">&quot;8-Other CNS alpha-agonists&quot;</span>
+				<span class="s">&quot;9-Antidepressants&quot;</span>
+				<span class="s">&quot;10-Antipsychotic agents&quot;</span>
+				<span class="s">&quot;11-Barbituates&quot;</span>
+				<span class="s">&quot;12-Benzodiazepine lists&quot;</span>
+				<span class="s">&quot;12-Benzodiazepine lists&quot;</span>
+				<span class="s">&quot;12-Benzodiazepine lists&quot;</span>
+				<span class="s">&quot;13-Nonbenzodiazepines - Z-drugs&quot;</span>
+				<span class="s">&quot;14-Ergoloid Mesylates&quot;</span>
+				<span class="s">&quot;15-Androgens&quot;</span>
+				<span class="s">&quot;16-Estrogens&quot;</span>
+				<span class="s">&quot;17-Growth hormone&quot;</span>
+				<span class="s">&quot;18-Insulin&quot;</span>
+				<span class="s">&quot;19-Sulfonylureas&quot;</span>
+				; 
+<span class="k">			global</span> catalog2
+			    <span class="s">&quot;20.Proton_Pump_Inhibitors&quot;</span>
+				<span class="s">&quot;21.non-selective NSAIDS&quot;</span>
+				<span class="s">&quot;22.Skeletal muscle relaxants&quot;</span>
+				<span class="s">&quot;23.non-DHP CCB&quot;</span>
+				<span class="s">&quot;24.Thiazolidinediones&quot;</span>
+				<span class="s">&quot;25.Acetyl cholinesterase inhib&quot;</span>
+				<span class="s">&quot;26.alpha-1 blockers&quot;</span>
+				<span class="s">&quot;27.ti-cyclic antidepressants&quot;</span>
+				<span class="s">&quot;28.corticosteroids&quot;</span>
+				<span class="s">&quot;29.H2 receptor antagonists&quot;</span>
+				<span class="s">&quot;30.antiepileptics&quot;</span>
+				<span class="s">&quot;31.antiemetics&quot;</span>
+				<span class="s">&quot;32.NSAIDS&quot;</span>
+				<span class="s">&quot;33.Diuretics&quot;</span>
+				<span class="s">&quot;34.SNRIs&quot;</span>
+				<span class="s">&quot;35.SSRIs&quot;</span>
+				<span class="s">&quot;36.RAS Inhibitor&quot;</span>
+				<span class="s">&quot;37.Opioids&quot;</span>
+				<span class="s">&quot;38.Anticholinergic&quot;</span>;
+<span class="k">			global</span> namelist1
+			    01_antihistamines
+				02_antiparkinsons
+				03_antispasmodics
+				04_antithrombotics
+				05_antiinfective
+				06_peripheralalpha1blockers
+				07_centralalpha1agonists
+				08_otheralpha1agonists
+				09_antidepressants
+				10_antipsychotics
+				11_barbiturates
+			    benzoshort 
+				benzolong
+				benzounk 
+				13_nonbenzodiazepines
+				14_ergoloids
+				15_androgens
+				16_estrogens
+				17_growthhormones
+				18_insulin
+				19_sulfonylureas;
+<span class="k">			global</span> namelist2
+				20_protonpumpinh
+				21_nonselectnsaids
+				22_musclerelaxants
+				23_nondhpccb
+				24_thiazolidinediones
+				25_acetylcholinesteraseinh
+				26_alpha1blockers
+				27_tca
+				28_corticosteroids
+				29_h2rblockers
+				30_antiepileptics
+				31_antiemetics
+				32_nsaids
+				33_diuretics
+				34_snri
+				35_ssri
+				36_rasinhibitors
+				37_opioids
+				38_anticholinergics;
+			#delimit cr 
+<span class="k">			capture log close</span> 
+<span class="k">			log</span> using <span class="s">&quot;</span><span class="vg">${workdir}</span><span class="s">01_bc050523.log&quot;</span>,replace 
+<span class="k">			set</span> max_memory .
+		}
+<span class="k">		if</span> <span class="nf">c</span>(N)<span class="o">==</span><span class="m">0</span> { <span class="c1">//results</span>
+<span class="k">		    local</span> group=<span class="m">1</span>
+<span class="k">			foreach class in</span> <span class="s">&quot;</span><span class="vg">$catalog1</span><span class="s">&quot;</span> {  
+			    import excel <span class="s">&quot;</span><span class="vg">${workdir}</span><span class="nv">`class&#39;</span><span class="s">.xlsx&quot;</span>,<span class="k"> clear</span>
+<span class="k">				drop in</span> <span class="m">1</span><span class="o">/</span><span class="m">6</span>
+<span class="k">				replace</span> A=<span class="nf">strtrim</span>(A)
+<span class="k">				replace</span> A=<span class="nf">ustrupper</span>(A)
+<span class="k">				rename</span> A drug_gnn
+<span class="k">				local</span> class_tidy:<span class="k"> di</span> <span class="nf">word</span>(<span class="s">&quot;</span><span class="vg">$namelist1</span><span class="s">&quot;</span>,<span class="nv">`group&#39;</span>)
+<span class="k">				g</span> class_gnn=<span class="s">&quot;</span><span class="nv">`class_tidy&#39;</span><span class="s">&quot;</span>
+<span class="k">				capture split</span> class_gnn,p(<span class="s">&quot;_&quot;</span>)
+<span class="k">				capture keep</span> drug_gnn class_gnn2
+<span class="k">				if</span> <span class="nf">inrange</span>(<span class="nv">`group&#39;</span>,<span class="m">1</span>,<span class="m">11</span>) {
+<span class="k">					g</span> group=<span class="nv">`group&#39;</span>
+				}
+<span class="k">				else</span> {
+<span class="k">					g</span> group=<span class="nv">`group&#39;</span><span class="o">-</span><span class="m">2</span>
+				}
+<span class="k">				keep if</span> <span class="o">!</span><span class="nf">missing</span>(drug)
+<span class="k">				local</span> filename:<span class="k"> di</span> <span class="nf">word</span>(<span class="s">&quot;</span><span class="vg">$namelist1</span><span class="s">&quot;</span>,<span class="nv">`group&#39;</span>)
+<span class="k">				capture save</span> <span class="s">&quot;</span><span class="nv">`filename&#39;</span><span class="s">&quot;</span>,replace  
+<span class="k">				noi di</span> <span class="s">&quot;</span><span class="nv">`filename&#39;</span><span class="s">&quot;</span>
+<span class="k">				local</span> group=<span class="nv">`group&#39;</span><span class="o">+</span><span class="m">1</span> 
+			}
+<span class="k">			use</span> benzoshort,clear
+<span class="k">			append</span> using benzolong
+<span class="k">			append</span> using benzounk <span class="c1">//debug</span>
+<span class="k">			replace</span> group=<span class="m">12</span>
+<span class="k">			drop</span> class_gnn
+<span class="k">			rename</span> class_gnn1 class_gnn2
+<span class="k">			save</span> 12_benzodiazepines,replace 
+		}
+<span class="k">		clear</span> 
+<span class="k">		if</span> <span class="nf">c</span>(N)<span class="o">==</span><span class="m">0</span> {
+<span class="k">			local</span> group=<span class="m">1</span>
+<span class="k">			foreach class in</span> <span class="s">&quot;</span><span class="vg">$catalog2</span><span class="s">&quot;</span> {
+				import excel <span class="s">&quot;</span><span class="vg">${workdir}</span><span class="s">20-38.xlsx&quot;</span>, <span class="cm">/*</span>
+<span class="cm">				    */</span> sheet(<span class="s">&quot;</span><span class="nv">`class&#39;</span><span class="s">&quot;</span>)<span class="k"> clear</span> 
+<span class="k">				drop in</span> <span class="m">1</span><span class="o">/</span><span class="m">1</span>
+<span class="k">				replace</span> A=<span class="nf">strtrim</span>(A)
+<span class="k">				replace</span> A=<span class="nf">ustrupper</span>(A)
+<span class="k">				rename</span> A drug_gnn
+<span class="k">				local</span> class_tidy:<span class="k"> di</span> <span class="nf">word</span>(<span class="s">&quot;</span><span class="vg">$namelist2</span><span class="s">&quot;</span>,<span class="nv">`group&#39;</span>)
+<span class="k">				g</span> class_gnn=<span class="s">&quot;</span><span class="nv">`class_tidy&#39;</span><span class="s">&quot;</span>
+<span class="k">				capture split</span> class_gnn,p(<span class="s">&quot;_&quot;</span>)
+<span class="k">				capture keep</span> drug_gnn class_gnn2
+<span class="k">				g</span> group=<span class="nv">`group&#39;</span><span class="o">+</span><span class="m">19</span>
+<span class="k">				keep if</span> <span class="o">!</span><span class="nf">missing</span>(drug)
+<span class="k">				local</span> filename:<span class="k"> di</span> <span class="nf">word</span>(<span class="s">&quot;</span><span class="vg">$namelist2</span><span class="s">&quot;</span>,<span class="nv">`group&#39;</span>)
+<span class="k">				capture save</span> <span class="s">&quot;</span><span class="nv">`filename&#39;</span><span class="s">&quot;</span>,replace 
+<span class="k">				noi di</span> <span class="s">&quot;</span><span class="nv">`filename&#39;</span><span class="s">&quot;</span>
+<span class="k">				local</span> group=<span class="nv">`group&#39;</span><span class="o">+</span><span class="m">1</span>
+				
+			}
+		}
+	  cls
+<span class="k">	  rm</span> benzoshort<span class="m">.</span>dta 
+<span class="k">	  rm</span> benzolong<span class="m">.</span>dta
+<span class="k">	  rm</span> benzounk<span class="m">.</span>dta 
+<span class="k">      noi ls</span> <span class="o">*</span>.dta
+<span class="k">	  timer list</span> 
+<span class="k">	  log close</span> 
+	}
+}
+
+
+	  
+</pre></div>
+</div>
+</section>
+<section id="logfile">
+<h4>1.2.9. logfile<a class="headerlink" href="#logfile" title="Permalink to this heading">#</a></h4>
+<div class="highlight-stata notranslate"><div class="highlight"><pre><span></span>01_antihistamines
+02_antiparkinsons
+03_antispasmodics
+04_antithrombotics
+05_antiinfective
+06_peripheralalpha1blockers
+07_centralalpha1agonists
+08_otheralpha1agonists
+09_antidepressants
+10_antipsychotics
+11_barbiturates
+benzoshort
+benzolong
+benzounk
+13_nonbenzodiazepines
+14_ergoloids
+15_androgens
+16_estrogens
+17_growthhormones
+18_insulin
+19_sulfonylureas
+20_protonpumpinh
+21_nonselectnsaids
+22_musclerelaxants
+23_nondhpccb
+24_thiazolidinediones
+25_acetylcholinesteraseinh
+26_alpha1blockers
+27_tca
+28_corticosteroids
+29_h2rblockers
+30_antiepileptics
+31_antiemetics
+32_nsaids
+33_diuretics
+34_snri
+35_ssri
+36_rasinhibitors
+37_opioids
+38_anticholinergics
+
+<span class="o">-</span>rw<span class="o">-</span>r<span class="o">--</span>r<span class="o">--</span>@ <span class="m">1</span><span class="k"> d</span>  staff  <span class="m">166833</span> May  <span class="m">8</span> <span class="m">23</span>:<span class="m">01</span> 01_antihistamines<span class="m">.</span>dta
+<span class="o">-</span>rw<span class="o">-</span>r<span class="o">--</span>r<span class="o">--</span>@ <span class="m">1</span><span class="k"> d</span>  staff   <span class="m">39999</span> May  <span class="m">8</span> <span class="m">23</span>:<span class="m">01</span> 02_antiparkinsons<span class="m">.</span>dta
+<span class="o">-</span>rw<span class="o">-</span>r<span class="o">--</span>r<span class="o">--</span>@ <span class="m">1</span><span class="k"> d</span>  staff   <span class="m">34507</span> May  <span class="m">8</span> <span class="m">23</span>:<span class="m">01</span> 03_antispasmodics<span class="m">.</span>dta
+<span class="o">-</span>rw<span class="o">-</span>r<span class="o">--</span>r<span class="o">--</span>@ <span class="m">1</span><span class="k"> d</span>  staff   <span class="m">88035</span> May  <span class="m">8</span> <span class="m">23</span>:<span class="m">01</span> 04_antithrombotics<span class="m">.</span>dta
+<span class="o">-</span>rw<span class="o">-</span>r<span class="o">--</span>r<span class="o">--</span>@ <span class="m">1</span><span class="k"> d</span>  staff  <span class="m">365469</span> May  <span class="m">8</span> <span class="m">23</span>:<span class="m">01</span> 05_antiinfective<span class="m">.</span>dta
+<span class="o">-</span>rw<span class="o">-</span>r<span class="o">--</span>r<span class="o">--</span>@ <span class="m">1</span><span class="k"> d</span>  staff   <span class="m">25663</span> May  <span class="m">8</span> <span class="m">23</span>:<span class="m">01</span> 06_peripheralalpha1blockers<span class="m">.</span>dta
+<span class="o">-</span>rw<span class="o">-</span>r<span class="o">--</span>r<span class="o">--</span>@ <span class="m">1</span><span class="k"> d</span>  staff   <span class="m">12151</span> May  <span class="m">8</span> <span class="m">23</span>:<span class="m">01</span> 07_centralalpha1agonists<span class="m">.</span>dta
+<span class="o">-</span>rw<span class="o">-</span>r<span class="o">--</span>r<span class="o">--</span>@ <span class="m">1</span><span class="k"> d</span>  staff    <span class="m">5247</span> May  <span class="m">8</span> <span class="m">23</span>:<span class="m">01</span> 08_otheralpha1agonists<span class="m">.</span>dta
+<span class="o">-</span>rw<span class="o">-</span>r<span class="o">--</span>r<span class="o">--</span>@ <span class="m">1</span><span class="k"> d</span>  staff  <span class="m">156447</span> May  <span class="m">8</span> <span class="m">23</span>:<span class="m">01</span> 09_antidepressants<span class="m">.</span>dta
+<span class="o">-</span>rw<span class="o">-</span>r<span class="o">--</span>r<span class="o">--</span>@ <span class="m">1</span><span class="k"> d</span>  staff  <span class="m">232398</span> May  <span class="m">8</span> <span class="m">23</span>:<span class="m">01</span> 10_antipsychotics<span class="m">.</span>dta
+<span class="o">-</span>rw<span class="o">-</span>r<span class="o">--</span>r<span class="o">--</span>@ <span class="m">1</span><span class="k"> d</span>  staff   <span class="m">59112</span> May  <span class="m">8</span> <span class="m">23</span>:<span class="m">01</span> 11_barbiturates<span class="m">.</span>dta
+<span class="o">-</span>rw<span class="o">-</span>r<span class="o">--</span>r<span class="o">--</span>@ <span class="m">1</span><span class="k"> d</span>  staff  <span class="m">165070</span> May  <span class="m">8</span> <span class="m">23</span>:<span class="m">01</span> 12_benzodiazepines<span class="m">.</span>dta
+<span class="o">-</span>rw<span class="o">-</span>r<span class="o">--</span>r<span class="o">--</span>@ <span class="m">1</span><span class="k"> d</span>  staff   <span class="m">21510</span> May  <span class="m">8</span> <span class="m">23</span>:<span class="m">01</span> 13_nonbenzodiazepines<span class="m">.</span>dta
+<span class="o">-</span>rw<span class="o">-</span>r<span class="o">--</span>r<span class="o">--</span>@ <span class="m">1</span><span class="k"> d</span>  staff   <span class="m">21290</span> May  <span class="m">8</span> <span class="m">23</span>:<span class="m">01</span> 14_ergoloids<span class="m">.</span>dta
+<span class="o">-</span>rw<span class="o">-</span>r<span class="o">--</span>r<span class="o">--</span>@ <span class="m">1</span><span class="k"> d</span>  staff   <span class="m">26103</span> May  <span class="m">8</span> <span class="m">23</span>:<span class="m">01</span> 15_androgens<span class="m">.</span>dta
+<span class="o">-</span>rw<span class="o">-</span>r<span class="o">--</span>r<span class="o">--</span>@ <span class="m">1</span><span class="k"> d</span>  staff   <span class="m">54036</span> May  <span class="m">8</span> <span class="m">23</span>:<span class="m">01</span> 16_estrogens<span class="m">.</span>dta
+<span class="o">-</span>rw<span class="o">-</span>r<span class="o">--</span>r<span class="o">--</span>@ <span class="m">1</span><span class="k"> d</span>  staff   <span class="m">32403</span> May  <span class="m">8</span> <span class="m">23</span>:<span class="m">01</span> 17_growthhormones<span class="m">.</span>dta
+<span class="o">-</span>rw<span class="o">-</span>r<span class="o">--</span>r<span class="o">--</span>@ <span class="m">1</span><span class="k"> d</span>  staff   <span class="m">35161</span> May  <span class="m">8</span> <span class="m">23</span>:<span class="m">01</span> 18_insulin<span class="m">.</span>dta
+<span class="o">-</span>rw<span class="o">-</span>r<span class="o">--</span>r<span class="o">--</span>@ <span class="m">1</span><span class="k"> d</span>  staff   <span class="m">10875</span> May  <span class="m">8</span> <span class="m">23</span>:<span class="m">01</span> 19_sulfonylureas<span class="m">.</span>dta
+<span class="o">-</span>rw<span class="o">-</span>r<span class="o">--</span>r<span class="o">--</span>@ <span class="m">1</span><span class="k"> d</span>  staff    <span class="m">3879</span> May  <span class="m">8</span> <span class="m">23</span>:<span class="m">01</span> 20_protonpumpinh<span class="m">.</span>dta
+<span class="o">-</span>rw<span class="o">-</span>r<span class="o">--</span>r<span class="o">--</span>@ <span class="m">1</span><span class="k"> d</span>  staff    <span class="m">3495</span> May  <span class="m">8</span> <span class="m">23</span>:<span class="m">01</span> 21_nonselectnsaids<span class="m">.</span>dta
+<span class="o">-</span>rw<span class="o">-</span>r<span class="o">--</span>r<span class="o">--</span>@ <span class="m">1</span><span class="k"> d</span>  staff    <span class="m">7311</span> May  <span class="m">8</span> <span class="m">23</span>:<span class="m">02</span> 22_musclerelaxants<span class="m">.</span>dta
+<span class="o">-</span>rw<span class="o">-</span>r<span class="o">--</span>r<span class="o">--</span>@ <span class="m">1</span><span class="k"> d</span>  staff    <span class="m">2652</span> May  <span class="m">8</span> <span class="m">23</span>:<span class="m">02</span> 23_nondhpccb<span class="m">.</span>dta
+<span class="o">-</span>rw<span class="o">-</span>r<span class="o">--</span>r<span class="o">--</span>@ <span class="m">1</span><span class="k"> d</span>  staff    <span class="m">2631</span> May  <span class="m">8</span> <span class="m">23</span>:<span class="m">02</span> 24_thiazolidinediones<span class="m">.</span>dta
+<span class="o">-</span>rw<span class="o">-</span>r<span class="o">--</span>r<span class="o">--</span>@ <span class="m">1</span><span class="k"> d</span>  staff   <span class="m">10323</span> May  <span class="m">8</span> <span class="m">23</span>:<span class="m">02</span> 25_acetylcholinesteraseinh<span class="m">.</span>dta
+<span class="o">-</span>rw<span class="o">-</span>r<span class="o">--</span>r<span class="o">--</span>@ <span class="m">1</span><span class="k"> d</span>  staff    <span class="m">8169</span> May  <span class="m">8</span> <span class="m">23</span>:<span class="m">02</span> 26_alpha1blockers<span class="m">.</span>dta
+<span class="o">-</span>rw<span class="o">-</span>r<span class="o">--</span>r<span class="o">--</span>@ <span class="m">1</span><span class="k"> d</span>  staff    <span class="m">4659</span> May  <span class="m">8</span> <span class="m">23</span>:<span class="m">02</span> 27_tca<span class="m">.</span>dta
+<span class="o">-</span>rw<span class="o">-</span>r<span class="o">--</span>r<span class="o">--</span>@ <span class="m">1</span><span class="k"> d</span>  staff   <span class="m">10527</span> May  <span class="m">8</span> <span class="m">23</span>:<span class="m">02</span> 28_corticosteroids<span class="m">.</span>dta
+<span class="o">-</span>rw<span class="o">-</span>r<span class="o">--</span>r<span class="o">--</span>@ <span class="m">1</span><span class="k"> d</span>  staff    <span class="m">3954</span> May  <span class="m">8</span> <span class="m">23</span>:<span class="m">02</span> 29_h2rblockers<span class="m">.</span>dta
+<span class="o">-</span>rw<span class="o">-</span>r<span class="o">--</span>r<span class="o">--</span>@ <span class="m">1</span><span class="k"> d</span>  staff   <span class="m">11043</span> May  <span class="m">8</span> <span class="m">23</span>:<span class="m">02</span> 30_antiepileptics<span class="m">.</span>dta
+<span class="o">-</span>rw<span class="o">-</span>r<span class="o">--</span>r<span class="o">--</span>@ <span class="m">1</span><span class="k"> d</span>  staff    <span class="m">6259</span> May  <span class="m">8</span> <span class="m">23</span>:<span class="m">02</span> 31_antiemetics<span class="m">.</span>dta
+<span class="o">-</span>rw<span class="o">-</span>r<span class="o">--</span>r<span class="o">--</span>@ <span class="m">1</span><span class="k"> d</span>  staff   <span class="m">58849</span> May  <span class="m">8</span> <span class="m">23</span>:<span class="m">02</span> 32_nsaids<span class="m">.</span>dta
+<span class="o">-</span>rw<span class="o">-</span>r<span class="o">--</span>r<span class="o">--</span>@ <span class="m">1</span><span class="k"> d</span>  staff    <span class="m">7920</span> May  <span class="m">8</span> <span class="m">23</span>:<span class="m">02</span> 33_diuretics<span class="m">.</span>dta
+<span class="o">-</span>rw<span class="o">-</span>r<span class="o">--</span>r<span class="o">--</span>@ <span class="m">1</span><span class="k"> d</span>  staff    <span class="m">3267</span> May  <span class="m">8</span> <span class="m">23</span>:<span class="m">02</span> 34_snri<span class="m">.</span>dta
+<span class="o">-</span>rw<span class="o">-</span>r<span class="o">--</span>r<span class="o">--</span>@ <span class="m">1</span><span class="k"> d</span>  staff    <span class="m">5317</span> May  <span class="m">8</span> <span class="m">23</span>:<span class="m">02</span> 35_ssri<span class="m">.</span>dta
+<span class="o">-</span>rw<span class="o">-</span>r<span class="o">--</span>r<span class="o">--</span>@ <span class="m">1</span><span class="k"> d</span>  staff    <span class="m">6775</span> May  <span class="m">8</span> <span class="m">23</span>:<span class="m">02</span> 36_rasinhibitors<span class="m">.</span>dta
+<span class="o">-</span>rw<span class="o">-</span>r<span class="o">--</span>r<span class="o">--</span>@ <span class="m">1</span><span class="k"> d</span>  staff    <span class="m">9513</span> May  <span class="m">8</span> <span class="m">23</span>:<span class="m">02</span> 37_opioids<span class="m">.</span>dta
+<span class="o">-</span>rw<span class="o">-</span>r<span class="o">--</span>r<span class="o">--</span>  <span class="m">1</span><span class="k"> d</span>  staff   <span class="m">19039</span> May  <span class="m">8</span> <span class="m">23</span>:<span class="m">02</span> 38_anticholinergics<span class="m">.</span>dta
 </pre></div>
 </div>
 </section>
@@ -2254,6 +2647,10 @@ import excel <span class="s">&quot;17_classR.xlsx&quot;</span>, sheet(<span clas
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#third">1.2.3 Third</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fourth">1.2.4 Fourth</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#five">1.2.5 Five</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#sixth">1.2.6. Sixth</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#seventh">1.2.7 Seventh</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#alternative">1.2.8 Alternative</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#logfile">1.2.9. logfile</a></li>
 </ul>
 </li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#append">1.3 Append</a></li>
