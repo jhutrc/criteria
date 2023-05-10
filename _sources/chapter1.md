@@ -1,18 +1,18 @@
-# abstract
+# background
 
 ## Background
-* Person: Rasheeda, Abi, Mara, Hospitalists
+* Person: Rasheeda, Abi, Mara, Stella, Lori
 * Place: JHU, Duke, NYU
 * Time: 2019-2023
 
 ## Methods
 * Person: /dcs04/legacy-dcs01-igm/segevlab/data/ 
-* Place: @jhpce01.jhsph.edu
+* Place: cluster@jhpce01.jhsph.edu
 * Time: 2019-2023
 
 ## Results
 * Person: ~/usrds2015/claims/pd/pde2013.dta, ~/usrds2016/claims/pd/pde2014.dta, ~/usrds2015/core/payhist.dta, ~/usrds2015/core/medevid.dta, ~/usrds2016/core/medevid.dta, ~/usrds2015/core/patients.dta, ~/usrds2016/core/patients.dta 
-* Place: usa
+* Place: USA
 * Time: 2013-2014
 
 ## Conclusions
@@ -21,9 +21,8 @@
 * Study: First service date 2013-2014, no missing data, N=39,319
 
 ## Acknowledgments
-* Sunjae Bae
-* Hospitalists
+* NIA/NIH/DHHS
 
 ## References
-* Jhustata
-* Jhutrc
+* JHU-Stata
+* JHU-ERGOT/JHU-TRC
