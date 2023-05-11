@@ -1,28 +1,28 @@
 # background
 
-## Background
+## Investigators
 * Person: Rasheeda, Abi, Mara, Stella, Lori
-* Place: JHU, Duke, NYU
+* Place: Duke, JHU, NYU
 * Time: 2019-2023
 
-## Methods
+## Approach
 * Person: /dcs04/legacy-dcs01-igm/segevlab/data/ 
 * Place: cluster@jhpce01.jhsph.edu
 * Time: 2019-2023
 
-## Results
+## Data
 * Person: ~/usrds2015/claims/pd/pde2013.dta, ~/usrds2016/claims/pd/pde2014.dta, ~/usrds2015/core/payhist.dta, ~/usrds2015/core/medevid.dta, ~/usrds2016/core/medevid.dta, ~/usrds2015/core/patients.dta, ~/usrds2016/core/patients.dta 
 * Place: USA
 * Time: 2013-2014
 
-## Conclusions
+## Source
 * Target: Older patients on hemodialysis
 * Source: USRDS, N=561,304
 * Study: First service date 2013-2014, no missing data, N=39,319
 
-## Acknowledgments
+## Funding
 * NIA/NIH/DHHS
 
-## References
+## Resources
 * JHU-Stata
-* JHU-ERGOT/JHU-TRC
+* JHU-ERGOT/TRC
