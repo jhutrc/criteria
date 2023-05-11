@@ -2,7 +2,7 @@
 
 ## Investigators
 * Person: Rasheeda, Abi, Mara, Stella, Lori
-* Place: JHU, Duke, NYU
+* Place: Duke, JHU, NYU
 * Time: 2019-2023
 
 ## Approach

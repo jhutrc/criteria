@@ -4,7 +4,7 @@
 
 **Potentially Inappropriate Medications in Dialysis**
 
-Rasheeda K. Hall MD, MBA, MHS1,2, Abimereki D[.](https://word2md.com) Muzaale MD, MPH3, Sunjae Bae KMD, MHS, MPH, PhD3, Stella M. Steal MLS4, Lori M. Rosman MLS4, Dorry L. Segev MD, PhD5, Mara McAdams-DeMarco PhD5
+Rasheeda K. Hall MD, MBA, MHS1,2, Abimereki D[.](https://word2md.com) Muzaale MD, MPH3[,](reviewrequests.PNG) Sunjae Bae KMD, MHS, MPH, PhD3, Stella M. Steal MLS4, Lori M. Rosman MLS4, Dorry L. Segev MD, PhD5, Mara McAdams-DeMarco PhD5
 
 1Department of Medicine, Duke University School of Medicine, Durham, NC
 
@@ -16,7 +16,13 @@ Rasheeda K. Hall MD, MBA, MHS1,2, Abimereki D[.](https://word2md.com) Muzaale MD
 
 5Department of Surgery, New York University School of Medicine, New York City, NY
 
-**Corresponding author:** Rasheeda Hall, 2424 Erwin Road, Suite 605, Durham NC 27705; [rasheeda.stephens@duke.edu](mailto:rasheeda.stephens@duke.edu), Phone: (919) 660-6861; ORCID: [0000-0002-3057-4828](javascript:popup_orcidDetail('http://orcid.org','0000-0002-3057-4828');)
+**Corresponding author:** 
+
+Rasheeda Hall, 2424 Erwin Road, Suite 605, Durham NC 27705; 
+
+[rasheeda.stephens@duke.edu](mailto:rasheeda.stephens@duke.edu), Phone: (919) 660-6861; 
+
+ORCID: [0000-0002-3057-4828](javascript:popup_orcidDetail('http://orcid.org','0000-0002-3057-4828');)
 
 **Abstract**
 
@@ -246,9 +252,6 @@ The mortality risk was obtained from a Cox proportional regression model adjusti
 |   | **(N=4,909)** | **(N=8,048)** | **(N=2,793)** |
 | **Age, median years [IQR]** | 74.3 [69.4-80.1] | 74.3 [69.4-80.1] | 73.7 [68.9-79.7] |
 | **Female, %** |
- |
- |
- |
 | **Race, %** |   |   |   |
 | **White** | 72.4 | 73.3 | 79.1 |
 | **Black** | 21.5 | 21.8 | 18.2 |
@@ -266,17 +269,11 @@ The mortality risk was obtained from a Cox proportional regression model adjusti
 | **Inability to Ambulate** | 18.2 | 18.6 | 23.5 |
 | **Institutionalized** | 12.3 | 11.3 | 17.1 |
 | **ESRD Cause, %** |
- |
- |
- |
 | **Diabetes** | 46.5 | 46.3 | 43.6 |
 | **Hypertension** | 37.2 | 35.6 | 34.3 |
 | **Glomerulonephritis** | 4.2 | 4.8 | 5.4 |
 | **Other** | 12.2 | 13.3 | 16.8 |
 | **Geographic Region, %** |
- |
- |
- |
 | **New England** | 3.7 | 3.4 | 3.9 |
 | **Mideast** | 22.3 | 18.2 | 15.1 |
 | **Great Lakes** | 18.3 | 17.3 | 18.6 |
