@@ -4,7 +4,7 @@
 
 **Potentially Inappropriate Medications in Dialysis**
 
-Rasheeda K. Hall MD, MBA, MHS1,2, Abimereki D[.](https://word2md.com) Muzaale MD, MPH3[,](https://jhutrc.github.io/criteria/_downloads/805a9f669ddfe0bb231cb38cbefab1f1/reviewrequests.PNG) Sunjae Bae KMD, MHS, MPH, PhD3, Stella M. Steal MLS4, Lori M. Rosman MLS4, Dorry L. Segev MD, PhD5, Mara McAdams-DeMarco PhD5
+Rasheeda K. Hall MD, MBA, MHS1,2, Abimereki D[.](https://word2md.com) Muzaale MD, MPH3[,](c) Sunjae Bae KMD, MHS, MPH, PhD3, Stella M. Steal MLS4, Lori M. Rosman MLS4, Dorry L. Segev MD, PhD5, Mara McAdams-DeMarco PhD5
 
 1Department of Medicine, Duke University School of Medicine, Durham, NC
 
