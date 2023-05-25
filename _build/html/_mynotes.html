@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>method &#8212; Beers Criteria</title>
+    <title>&lt;no title&gt; &#8212; Beers Criteria</title>
   
   
   
@@ -61,11 +61,9 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'chapter2';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_mynotes';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="results" href="chapter3.html" />
-    <link rel="prev" title="background" href="chapter1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -156,9 +154,9 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
+        <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="chapter1.html">background</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">method</a></li>
+<li class="toctree-l1"><a class="reference internal" href="chapter2.html">method</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chapter3.html">results</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chapter4.html">conclusion</a></li>
 <li class="toctree-l1"><a class="reference internal" href="chapter5.html">acknowledgements</a></li>
@@ -235,7 +233,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fchapter2.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2F_mynotes.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -265,7 +263,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="_sources/chapter2.ipynb" target="_blank"
+      <li><a href="_sources/_mynotes.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -275,7 +273,7 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.ipynb</span>
+<span class="btn__text-container">.md</span>
 </a>
 </li>
       
@@ -334,7 +332,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -345,11 +345,19 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>method</h1>
+    <h1><no title></h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+            </nav>
         </div>
     </div>
 </div>
@@ -359,88 +367,199 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="method">
-<h1>method<a class="headerlink" href="#method" title="Permalink to this heading">#</a></h1>
-<div class="cell tag_hide-input docutils container">
-<details class="hide above-input">
-<summary aria-label="Toggle hidden content">
-<span class="collapsed">Show code cell source</span>
-<span class="expanded">Hide code cell source</span>
-</summary>
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="c1">#import numpy as np</span>
-<span class="c1">#import sklearn as skl</span>
-<span class="c1"># </span>
+  <ol class="arabic simple">
+<li><p>revise this loop</p></li>
+<li><p>can cut its length by 80%</p></li>
+<li><p>lets do that on caffeine :)</p></li>
+</ol>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>qui {
+	qui {
+		clear
+		cls
+		if c(N) { //background
+			we compiled a comprehensive list of medications within 
+			each of the potentially inapporpriate medication (pim) 
+			classes in a systematic manner.
+			
+			first, informaticists used micromedex, the control vocabularies of            medline and embase, and medication websites to generate 
+			a trade and generic medication name list. 
+			
+			second, this list was curated to allow medications with multiple
+            mechanisms of action to be represented in more than one pim class.
+			we removed pims with topical or ocular routes of administration. 
+			
+			the final list was **imported into stata** to query 
+			medicare part d claims for pims...
+		} 
+		if c(N)&lt;1 { //methods
+		    global workdir `c(pwd)&#39; 
+			if c(os)==&quot;Windows&quot; {
+				global workdir &quot;$workdir\&quot;
+			}
+			else {
+				global workdir &quot;$workdir/&quot;
+			}
+			#delimit ;
+			global catalog1
+			    &quot;1-first gen antihisitamines&quot;
+				&quot;2-antiparkinsonian agents&quot;
+				&quot;3-Antispasmodics&quot;
+				&quot;4-Antithrombotics&quot;
+				&quot;5-antiinfective agents&quot;
+				&quot;6-Peripheral alpha-1 blockers&quot;
+				&quot;7-Central alpha-agonists&quot;
+				&quot;8-Other CNS alpha-agonists&quot;
+				&quot;9-Antidepressants&quot;
+				&quot;10-Antipsychotic agents&quot;
+				&quot;11-Barbituates&quot;
+				&quot;12-Benzodiazepine lists&quot;
+				&quot;12-Benzodiazepine lists&quot;
+				&quot;12-Benzodiazepine lists&quot;
+				&quot;13-Nonbenzodiazepines - Z-drugs&quot;
+				&quot;14-Ergoloid Mesylates&quot;
+				&quot;15-Androgens&quot;
+				&quot;16-Estrogens&quot;
+				&quot;17-Growth hormone&quot;
+				&quot;18-Insulin&quot;
+				&quot;19-Sulfonylureas&quot;
+				; // &quot;20-38&quot;
+			global catalog2
+			    &quot;20.Proton_Pump_Inhibitors&quot;
+				&quot;21.non-selective NSAIDS&quot;
+				&quot;22.Skeletal muscle relaxants&quot;
+				&quot;23.non-DHP CCB&quot;
+				&quot;24.Thiazolidinediones&quot;
+				&quot;25.Acetyl cholinesterase inhib&quot;
+				&quot;26.alpha-1 blockers&quot;
+				&quot;27.ti-cyclic antidepressants&quot;
+				&quot;28.corticosteroids&quot;
+				&quot;29.H2 receptor antagonists&quot;
+				&quot;30.antiepileptics&quot;
+				&quot;31.antiemetics&quot;
+				&quot;32.NSAIDS&quot;
+				&quot;33.Diuretics&quot;
+				&quot;34.SNRIs&quot;
+				&quot;35.SSRIs&quot;
+				&quot;36.RAS Inhibitor&quot;
+				&quot;37.Opioids&quot;
+				&quot;38.Anticholinergic&quot;;
+			global namelist1
+			    01_antihistamines
+				02_antiparkinsons
+				03_antispasmodics
+				04_antithrombotics
+				05_antiinfective
+				06_peripheralalpha1blockers
+				07_centralalpha1agonists
+				08_otheralpha1agonists
+				09_antidepressants
+				10_antipsychotics
+				11_barbiturates
+			    benzoshort 
+				benzolong
+				benzounk 
+				13_nonbenzodiazepines
+				14_ergoloids
+				15_androgens
+				16_estrogens
+				17_growthhormones
+				18_insulin
+				19_sulfonylureas;
+			global namelist2
+				20_protonpumpinh
+				21_nonselectnsaids
+				22_musclerelaxants
+				23_nondhpccb
+				24_thiazolidinediones
+				25_acetylcholinesteraseinh
+				26_alpha1blockers
+				27_tca
+				28_corticosteroids
+				29_h2rblockers
+				30_antiepileptics
+				31_antiemetics
+				32_nsaids
+				33_diuretics
+				34_snri
+				35_ssri
+				36_rasinhibitors
+				37_opioids
+				38_anticholinergics;
+			#delimit cr 
+			capture log close 
+			log using &quot;${workdir}01_bc050523.log&quot;,replace 
+			set max_memory .
+		}
+		if c(N)==0 { //results
+		    local group=1
+			foreach class in &quot;$catalog1&quot; {  
+			    import excel &quot;${workdir}`class&#39;.xlsx&quot;, clear
+				drop in 1/6
+				replace A=strtrim(A)
+				replace A=ustrupper(A)
+				rename A drug_gnn
+				local class_tidy: di word(&quot;$namelist1&quot;,`group&#39;)
+				g class_gnn=&quot;`class_tidy&#39;&quot;
+				capture split class_gnn,p(&quot;_&quot;)
+				capture keep drug_gnn class_gnn2
+				if inrange(`group&#39;,1,11) {
+					g group=`group&#39;
+				}
+				else {
+					g group=`group&#39;-2
+				}
+				keep if !missing(drug)
+				local filename: di word(&quot;$namelist1&quot;,`group&#39;)
+				capture save &quot;`filename&#39;&quot;,replace  
+				noi di &quot;`filename&#39;&quot;
+				local group=`group&#39;+1 
+			}
+			use benzoshort,clear
+			append using benzolong
+			append using benzounk //debug
+			replace group=12
+			drop class_gnn
+			rename class_gnn1 class_gnn2
+			save 12_benzodiazepines,replace 
+		}
+		clear 
+		if c(N)==0 {
+			local group=1
+			foreach class in &quot;$catalog2&quot; {
+				import excel &quot;${workdir}20-38.xlsx&quot;, /*
+				    */ sheet(&quot;`class&#39;&quot;) clear 
+				drop in 1/1
+				replace A=strtrim(A)
+				replace A=ustrupper(A)
+				rename A drug_gnn
+				local class_tidy: di word(&quot;$namelist2&quot;,`group&#39;)
+				g class_gnn=&quot;`class_tidy&#39;&quot;
+				capture split class_gnn,p(&quot;_&quot;)
+				capture keep drug_gnn class_gnn2
+				g group=`group&#39;+19
+				keep if !missing(drug)
+				local filename: di word(&quot;$namelist2&quot;,`group&#39;)
+				capture save &quot;`filename&#39;&quot;,replace 
+				noi di &quot;`filename&#39;&quot;
+				local group=`group&#39;+1
+				
+			}
+		}
+	  cls
+	  rm benzoshort.dta 
+	  rm benzolong.dta
+	  rm benzounk.dta 
+      noi ls *.dta
+	  timer list 
+	  log close 
+	}
+}
 
-<span class="c1">#plt.figure(figsize=[2, 2])</span>
-<span class="n">G</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">DiGraph</span><span class="p">()</span>
-<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;claims&quot;</span><span class="p">,</span> <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">950</span><span class="p">))</span>
-<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;payer&quot;</span><span class="p">,</span> <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">475</span><span class="p">))</span>
-<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;older&quot;</span><span class="p">,</span> <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">))</span>
-<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;firstse&quot;</span><span class="p">,</span> <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1900</span><span class="p">,</span> <span class="o">-</span><span class="mi">150</span><span class="p">)</span> <span class="p">)</span>
-<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;list&quot;</span><span class="p">,</span> <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mi">1900</span><span class="p">,</span> <span class="o">-</span><span class="mi">150</span><span class="p">)</span> <span class="p">)</span>
-<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;elig&quot;</span><span class="p">,</span> <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">3000</span><span class="p">,</span> <span class="o">-</span><span class="mi">550</span><span class="p">)</span> <span class="p">)</span>
-<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;tx&quot;</span><span class="p">,</span> <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mi">3000</span><span class="p">,</span> <span class="o">-</span><span class="mi">550</span><span class="p">)</span> <span class="p">)</span>
-<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;valid&quot;</span><span class="p">,</span>  <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">2000</span><span class="p">,</span> <span class="o">-</span><span class="mi">950</span><span class="p">)</span> <span class="p">)</span>
-<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;outc&quot;</span><span class="p">,</span>  <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="o">-</span><span class="mi">2000</span><span class="p">,</span> <span class="o">-</span><span class="mi">960</span><span class="p">)</span> <span class="p">)</span>
-<span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="s2">&quot;train&quot;</span><span class="p">,</span>  <span class="n">pos</span> <span class="o">=</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="o">-</span><span class="mi">700</span><span class="p">)</span> <span class="p">)</span>
-<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([(</span><span class="s2">&quot;claims&quot;</span><span class="p">,</span><span class="s2">&quot;payer&quot;</span><span class="p">)])</span>
-<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([(</span><span class="s2">&quot;payer&quot;</span><span class="p">,</span><span class="s2">&quot;older&quot;</span><span class="p">)])</span>
-<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([(</span><span class="s2">&quot;older&quot;</span><span class="p">,</span> <span class="s2">&quot;list&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;older&quot;</span><span class="p">,</span> <span class="s2">&quot;firstse&quot;</span><span class="p">)])</span>
-<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([(</span><span class="s2">&quot;list&quot;</span><span class="p">,</span> <span class="s2">&quot;tx&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;firstse&quot;</span><span class="p">,</span> <span class="s2">&quot;elig&quot;</span><span class="p">)</span> <span class="p">])</span>
-<span class="n">G</span><span class="o">.</span><span class="n">add_edges_from</span><span class="p">([</span> <span class="p">(</span><span class="s2">&quot;tx&quot;</span><span class="p">,</span><span class="s2">&quot;outc&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;elig&quot;</span><span class="p">,</span> <span class="s2">&quot;valid&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;elig&quot;</span><span class="p">,</span> <span class="s2">&quot;train&quot;</span><span class="p">)])</span>
 
-<span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> 
-        <span class="n">nx</span><span class="o">.</span><span class="n">get_node_attributes</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="s1">&#39;pos&#39;</span><span class="p">),</span> 
-        <span class="n">with_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> 
-        <span class="n">font_weight</span><span class="o">=</span><span class="s1">&#39;bold&#39;</span><span class="p">,</span> 
-        <span class="n">node_size</span> <span class="o">=</span> <span class="mi">4500</span><span class="p">,</span>
-        <span class="n">node_color</span> <span class="o">=</span> <span class="s2">&quot;lightblue&quot;</span><span class="p">,</span>
-        <span class="n">linewidths</span> <span class="o">=</span> <span class="mi">3</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">collections</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">set_edgecolor</span><span class="p">(</span><span class="s2">&quot;#000000&quot;</span><span class="p">)</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">([</span><span class="o">-</span><span class="mi">5000</span><span class="p">,</span> <span class="mi">5000</span><span class="p">])</span>
-<span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">([</span><span class="o">-</span><span class="mi">1000</span><span class="p">,</span> <span class="mi">1000</span><span class="p">])</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+	  
+
 </pre></div>
 </div>
-</div>
-</details>
-<div class="cell_output docutils container">
-<img alt="_images/e64626b85a0796885fc7aab964244c27138bfceb96aa514afc51087185878c4f.png" src="_images/e64626b85a0796885fc7aab964244c27138bfceb96aa514afc51087185878c4f.png" />
-</div>
-</div>
-<ul class="simple">
-<li><p>Claims (Part D: N=561,304)</p>
-<ul>
-<li><p>Without Payer, Part A, B, or MPO: N=383,833</p></li>
-</ul>
-</li>
-<li><p>Payer (Part A, B, or MPO: N=177,471)</p>
-<ul>
-<li><p>Age &lt; 65y or no hemodialysis: N=104,995</p></li>
-</ul>
-</li>
-<li><p>Older (Hemodialysis: N=72,476)</p>
-<ul>
-<li><p>First_SE &lt; 01/01/2013: N=23,879</p></li>
-</ul>
-</li>
-<li><p>First_SE (01/01/2013-12/31/2014: N=48,597)</p>
-<ul>
-<li><p>Missing data (Race, BMI, modality, death, coverage, &lt;91d from FIRST_SE: N=9,278)</p></li>
-</ul>
-</li>
-<li><p>Eligible (For inclusion into study: N=39,319)</p>
-<ul>
-<li><p>Training (N==15,750)</p></li>
-<li><p>Validation (N=23,569)</p></li>
-</ul>
-</li>
-</ul>
-</section>
 
     <script type="text/x-thebe-config">
     {
@@ -473,24 +592,6 @@ document.write(`
   
     <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="chapter1.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">background</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="chapter3.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">results</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div></div>
   
 </div>
@@ -500,6 +601,20 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+  </nav></div>
+
+</div></div>
               
             
           </div>
