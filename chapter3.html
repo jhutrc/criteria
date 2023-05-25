@@ -1496,7 +1496,7 @@ export delimited using <span class="s">&quot;05_antiinfective.txt&quot;</span>, 
 <span class="k">				global</span> workdir <span class="s">&quot;</span><span class="vg">$workdir</span><span class="s">/&quot;</span>
 			}
 			#delimit ;
-<span class="k">			global</span> catalog1
+<span class="k">			global</span> catalog
 			    <span class="s">&quot;1-first gen antihisitamines&quot;</span>
 				<span class="s">&quot;2-antiparkinsonian agents&quot;</span>
 				<span class="s">&quot;3-Antispasmodics&quot;</span>
@@ -1518,8 +1518,6 @@ export delimited using <span class="s">&quot;05_antiinfective.txt&quot;</span>, 
 				<span class="s">&quot;17-Growth hormone&quot;</span>
 				<span class="s">&quot;18-Insulin&quot;</span>
 				<span class="s">&quot;19-Sulfonylureas&quot;</span>
-				; <span class="c1">// &quot;20-38&quot;</span>
-<span class="k">			global</span> catalog2
 			    <span class="s">&quot;20.Proton_Pump_Inhibitors&quot;</span>
 				<span class="s">&quot;21.non-selective NSAIDS&quot;</span>
 				<span class="s">&quot;22.Skeletal muscle relaxants&quot;</span>
@@ -1539,48 +1537,6 @@ export delimited using <span class="s">&quot;05_antiinfective.txt&quot;</span>, 
 				<span class="s">&quot;36.RAS Inhibitor&quot;</span>
 				<span class="s">&quot;37.Opioids&quot;</span>
 				<span class="s">&quot;38.Anticholinergic&quot;</span>;
-<span class="k">			global</span> namelist1
-			    01_antihistamines
-				02_antiparkinsons
-				03_antispasmodics
-				04_antithrombotics
-				05_antiinfective
-				06_peripheralalpha1blockers
-				07_centralalpha1agonists
-				08_otheralpha1agonists
-				09_antidepressants
-				10_antipsychotics
-				11_barbiturates
-			    benzoshort 
-				benzolong
-				benzounk 
-				13_nonbenzodiazepines
-				14_ergoloids
-				15_androgens
-				16_estrogens
-				17_growthhormones
-				18_insulin
-				19_sulfonylureas;
-<span class="k">			global</span> namelist2
-				20_protonpumpinh
-				21_nonselectnsaids
-				22_musclerelaxants
-				23_nondhpccb
-				24_thiazolidinediones
-				25_acetylcholinesteraseinh
-				26_alpha1blockers
-				27_tca
-				28_corticosteroids
-				29_h2rblockers
-				30_antiepileptics
-				31_antiemetics
-				32_nsaids
-				33_diuretics
-				34_snri
-				35_ssri
-				36_rasinhibitors
-				37_opioids
-				38_anticholinergics;
 			#delimit cr 
 <span class="k">			capture log close</span> 
 <span class="k">			log</span> using <span class="s">&quot;</span><span class="vg">${workdir}</span><span class="s">01_bc050523.log&quot;</span>,replace 
@@ -1588,71 +1544,133 @@ export delimited using <span class="s">&quot;05_antiinfective.txt&quot;</span>, 
 		}
 <span class="k">		if</span> <span class="nf">c</span>(N)<span class="o">==</span><span class="m">0</span> { <span class="c1">//results</span>
 <span class="k">		    local</span> group=<span class="m">1</span>
-<span class="k">			foreach class in</span> <span class="s">&quot;</span><span class="vg">$catalog1</span><span class="s">&quot;</span> {  
-			    import excel <span class="s">&quot;</span><span class="vg">${workdir}</span><span class="nv">`class&#39;</span><span class="s">.xlsx&quot;</span>,<span class="k"> clear</span>
-<span class="k">				drop in</span> <span class="m">1</span><span class="o">/</span><span class="m">6</span>
-<span class="k">				replace</span> A=<span class="nf">strtrim</span>(A)
-<span class="k">				replace</span> A=<span class="nf">ustrupper</span>(A)
-<span class="k">				rename</span> A drug_gnn
-<span class="k">				local</span> class_tidy:<span class="k"> di</span> <span class="nf">word</span>(<span class="s">&quot;</span><span class="vg">$namelist1</span><span class="s">&quot;</span>,<span class="nv">`group&#39;</span>)
-<span class="k">				g</span> class_gnn=<span class="s">&quot;</span><span class="nv">`class_tidy&#39;</span><span class="s">&quot;</span>
-<span class="k">				capture split</span> class_gnn,p(<span class="s">&quot;_&quot;</span>)
-<span class="k">				capture keep</span> drug_gnn class_gnn2
-<span class="k">				if</span> <span class="nf">inrange</span>(<span class="nv">`group&#39;</span>,<span class="m">1</span>,<span class="m">11</span>) {
-<span class="k">					g</span> group=<span class="nv">`group&#39;</span>
+<span class="k">		    foreach class in</span> <span class="s">&quot;</span><span class="vg">$catalog</span><span class="s">&quot;</span> {
+<span class="k">				if</span> <span class="nf">inrange</span>(<span class="nv">`group&#39;</span>,<span class="m">1</span>,<span class="m">9</span>) {
+					import excel <span class="s">&quot;</span><span class="vg">${workdir}</span><span class="nv">`class&#39;</span><span class="s">.xlsx&quot;</span>,<span class="k"> clear</span>
+					<span class="c1">//noi di &quot;`class&#39;&quot;</span>
+<span class="k">					local</span> class_tidy:<span class="k"> di</span> lower(<span class="nf">substr</span>(<span class="s">&quot;</span><span class="nv">`class&#39;</span><span class="s">&quot;</span>,<span class="m">3</span>,.))
+<span class="k">					noi di</span> <span class="s">&quot;</span><span class="nv">`class_tidy&#39;</span><span class="s">&quot;</span>
+<span class="k">					local</span> group=<span class="nv">`group&#39;</span><span class="o">+</span><span class="m">1</span>
 				}
+<span class="k">				else if</span> <span class="nf">inrange</span>(<span class="nv">`group&#39;</span>,<span class="m">10</span>,<span class="m">11</span>) {
+					import excel <span class="s">&quot;</span><span class="vg">${workdir}</span><span class="nv">`class&#39;</span><span class="s">.xlsx&quot;</span>,<span class="k"> clear</span>
+					<span class="c1">//noi di &quot;`class&#39;&quot;</span>
+<span class="k">					local</span> class_tidy:<span class="k"> di</span> lower(<span class="nf">substr</span>(<span class="s">&quot;</span><span class="nv">`class&#39;</span><span class="s">&quot;</span>,<span class="m">4</span>,.))
+<span class="k">					noi di</span> <span class="s">&quot;</span><span class="nv">`class_tidy&#39;</span><span class="s">&quot;</span>
+<span class="k">					local</span> group=<span class="nv">`group&#39;</span><span class="o">+</span><span class="m">1</span>
+				}	
+<span class="k">				else if</span> <span class="nf">inrange</span>(<span class="nv">`group&#39;</span>,<span class="m">12</span>,<span class="m">21</span>) {
+					import excel <span class="s">&quot;</span><span class="vg">${workdir}</span><span class="nv">`class&#39;</span><span class="s">.xlsx&quot;</span>,<span class="k"> clear</span>
+					<span class="c1">//noi di &quot;`class&#39;&quot;</span>
+<span class="k">					local</span> class_tidy:<span class="k"> di</span> lower(<span class="nf">substr</span>(<span class="s">&quot;</span><span class="nv">`class&#39;</span><span class="s">&quot;</span>,<span class="m">4</span>,.))
+<span class="k">					noi di</span> <span class="s">&quot;</span><span class="nv">`class_tidy&#39;</span><span class="s">&quot;</span>
+<span class="k">					local</span> group=<span class="nv">`group&#39;</span><span class="o">+</span><span class="m">1</span>
+				}				
 <span class="k">				else</span> {
-<span class="k">					g</span> group=<span class="nv">`group&#39;</span><span class="o">-</span><span class="m">2</span>
+			   	    import excel <span class="s">&quot;</span><span class="vg">${workdir}</span><span class="s">20-38.xlsx&quot;</span>, <span class="cm">/*</span>
+<span class="cm">				        */</span> sheet(<span class="s">&quot;</span><span class="nv">`class&#39;</span><span class="s">&quot;</span>)<span class="k"> clear</span> 
+					<span class="c1">//noi di &quot;`class&#39;&quot;</span>
+<span class="k">					local</span> class_tidy:<span class="k"> di</span> lower(<span class="nf">substr</span>(<span class="s">&quot;</span><span class="nv">`class&#39;</span><span class="s">&quot;</span>,<span class="m">4</span>,.))
+<span class="k">					noi di</span> <span class="s">&quot;</span><span class="nv">`class_tidy&#39;</span><span class="s">&quot;</span>
+<span class="k">					local</span> group=<span class="nv">`group&#39;</span><span class="o">+</span><span class="m">1</span>
 				}
-<span class="k">				keep if</span> <span class="o">!</span><span class="nf">missing</span>(drug)
-<span class="k">				local</span> filename:<span class="k"> di</span> <span class="nf">word</span>(<span class="s">&quot;</span><span class="vg">$namelist1</span><span class="s">&quot;</span>,<span class="nv">`group&#39;</span>)
-<span class="k">				capture save</span> <span class="s">&quot;</span><span class="nv">`filename&#39;</span><span class="s">&quot;</span>,replace  
-<span class="k">				noi di</span> <span class="s">&quot;</span><span class="nv">`filename&#39;</span><span class="s">&quot;</span>
-<span class="k">				local</span> group=<span class="nv">`group&#39;</span><span class="o">+</span><span class="m">1</span> 
 			}
-<span class="k">			use</span> benzoshort,clear
-<span class="k">			append</span> using benzolong
-<span class="k">			append</span> using benzounk <span class="c1">//debug</span>
-<span class="k">			replace</span> group=<span class="m">12</span>
-<span class="k">			drop</span> class_gnn
-<span class="k">			rename</span> class_gnn1 class_gnn2
-<span class="k">			save</span> 12_benzodiazepines,replace 
-		}
-<span class="k">		clear</span> 
-<span class="k">		if</span> <span class="nf">c</span>(N)<span class="o">==</span><span class="m">0</span> {
-<span class="k">			local</span> group=<span class="m">1</span>
-<span class="k">			foreach class in</span> <span class="s">&quot;</span><span class="vg">$catalog2</span><span class="s">&quot;</span> {
-				import excel <span class="s">&quot;</span><span class="vg">${workdir}</span><span class="s">20-38.xlsx&quot;</span>, <span class="cm">/*</span>
-<span class="cm">				    */</span> sheet(<span class="s">&quot;</span><span class="nv">`class&#39;</span><span class="s">&quot;</span>)<span class="k"> clear</span> 
-<span class="k">				drop in</span> <span class="m">1</span><span class="o">/</span><span class="m">1</span>
-<span class="k">				replace</span> A=<span class="nf">strtrim</span>(A)
-<span class="k">				replace</span> A=<span class="nf">ustrupper</span>(A)
-<span class="k">				rename</span> A drug_gnn
-<span class="k">				local</span> class_tidy:<span class="k"> di</span> <span class="nf">word</span>(<span class="s">&quot;</span><span class="vg">$namelist2</span><span class="s">&quot;</span>,<span class="nv">`group&#39;</span>)
-<span class="k">				g</span> class_gnn=<span class="s">&quot;</span><span class="nv">`class_tidy&#39;</span><span class="s">&quot;</span>
-<span class="k">				capture split</span> class_gnn,p(<span class="s">&quot;_&quot;</span>)
-<span class="k">				capture keep</span> drug_gnn class_gnn2
-<span class="k">				g</span> group=<span class="nv">`group&#39;</span><span class="o">+</span><span class="m">19</span>
-<span class="k">				keep if</span> <span class="o">!</span><span class="nf">missing</span>(drug)
-<span class="k">				local</span> filename:<span class="k"> di</span> <span class="nf">word</span>(<span class="s">&quot;</span><span class="vg">$namelist2</span><span class="s">&quot;</span>,<span class="nv">`group&#39;</span>)
-<span class="k">				capture save</span> <span class="s">&quot;</span><span class="nv">`filename&#39;</span><span class="s">&quot;</span>,replace 
-<span class="k">				noi di</span> <span class="s">&quot;</span><span class="nv">`filename&#39;</span><span class="s">&quot;</span>
-<span class="k">				local</span> group=<span class="nv">`group&#39;</span><span class="o">+</span><span class="m">1</span>
-				
-			}
-		}
-	  cls
-<span class="k">	  rm</span> benzoshort<span class="m">.</span>dta 
-<span class="k">	  rm</span> benzolong<span class="m">.</span>dta
-<span class="k">	  rm</span> benzounk<span class="m">.</span>dta 
-<span class="k">      noi ls</span> <span class="o">*</span>.dta
-<span class="k">	  timer list</span> 
-<span class="k">	  log close</span> 
-	}
-}
+			
+			
+			
+			<span class="c1">//still upgrading... </span>
+<span class="k">			noi assert</span> <span class="m">0</span>
+<span class="k">					 drop in</span> <span class="m">1</span><span class="o">/</span><span class="m">6</span>
+<span class="k">					 replace</span> A=<span class="nf">strtrim</span>(A)
+<span class="k">					 replace</span> A=<span class="nf">ustrupper</span>(A)
+<span class="k">					 rename</span> A drug_gnn
+<span class="k">					 local</span> class_tidy:<span class="k"> di</span> lower(<span class="nf">substr</span>(<span class="s">&quot;</span><span class="nv">`class&#39;</span><span class="s">&quot;</span>,<span class="m">3</span>,.))
+<span class="k">					 g</span> class_gnn=<span class="s">&quot;</span><span class="nv">`class_tidy&#39;</span><span class="s">&quot;</span>
+<span class="k">					 capture split</span> class_gnn,p(<span class="s">&quot;_&quot;</span>)
+<span class="k">					 capture keep</span> drug_gnn class_gnn2
+<span class="k">					 g</span> group=<span class="nv">`i&#39;</span>
+<span class="k">					 keep if</span> <span class="o">!</span><span class="nf">missing</span>(drug)
+<span class="k">					 local</span> filename:<span class="k"> di</span> lower(<span class="nf">substr</span>(<span class="s">&quot;</span><span class="nv">`class&#39;</span><span class="s">&quot;</span>,<span class="m">3</span>,.))
+<span class="k">					 capture save</span> <span class="s">&quot;0</span><span class="nv">`i&#39;</span><span class="s">_</span><span class="nv">`filename&#39;</span><span class="s">&quot;</span>,replace  
+<span class="k">					 noi di</span> <span class="s">&quot;0</span><span class="nv">`i_`filename&#39;&quot;</span>
+<span class="nv">				}</span>
+<span class="nv">				else if inrange(`group&#39;,10,11) {</span>
+<span class="nv">					 import excel &quot;</span><span class="vg">${workdir}</span><span class="nv">`class&#39;.xlsx&quot;, clear</span>
+<span class="nv">					 drop in 1/6</span>
+<span class="nv">					 replace A=strtrim(A)</span>
+<span class="nv">					 replace A=ustrupper(A)</span>
+<span class="nv">					 rename A drug_gnn</span>
+<span class="nv">					 local class_tidy: di lower(substr(&quot;`class&#39;&quot;,4,.))</span>
+<span class="nv">					 g class_gnn=&quot;`class_tidy&#39;&quot;</span>
+<span class="nv">					 capture split class_gnn,p(&quot;_&quot;)</span>
+<span class="nv">					 capture keep drug_gnn class_gnn2</span>
+<span class="nv">					 g group=`group&#39;</span>
+<span class="nv">					 keep if !missing(drug)</span>
+<span class="nv">					 local filename: di lower(substr(&quot;`class&#39;&quot;,4,.))</span>
+<span class="nv">					 capture save &quot;`group&#39;_`filename&#39;&quot;,replace </span>
+<span class="nv">					 noi di &quot;`group&#39;_`filename&#39;&quot;</span>
+<span class="nv">					 local group=`group&#39;+1 </span>
+<span class="nv">				}				 </span>
+<span class="nv">					 else if inrange(`group&#39;,12,14) {</span>
+<span class="nv">					 	capture save &quot;`filename&#39;`group&#39;&quot;,replace  </span>
+<span class="nv">					    noi di &quot;`filename&#39;`group&#39;&quot;</span>
+<span class="nv">						local group=`group&#39;+1 </span>
+<span class="nv">					 }</span>
+<span class="nv">					 else {</span>
+<span class="nv">					 	local group2=`group&#39;-2</span>
+<span class="nv">                        capture save &quot;`group2&#39;_`filename&#39;&quot;,replace  </span>
+<span class="nv">					    noi di &quot;`group2&#39;_`filename&#39;&quot;</span>
+<span class="nv">						local group=`group&#39;+1 </span>
+<span class="nv">					 }</span>
+<span class="nv">					 g group=`group2&#39;</span>
+<span class="nv">				}			    </span>
+<span class="nv">				else {</span>
+<span class="nv">			   	    import excel &quot;</span><span class="vg">${workdir}</span><span class="nv">20-38.xlsx&quot;, /*</span>
+<span class="nv">				        */ sheet(&quot;`class&#39;&quot;) clear </span>
+<span class="nv">					local group2=`group&#39;-2</span>
+<span class="nv">                    drop in 1/1</span>
+<span class="nv">				    replace A=strtrim(A)</span>
+<span class="nv">				    replace A=ustrupper(A)</span>
+<span class="nv">				    rename A drug_gnn</span>
+<span class="nv">				    local class_tidy: di lower(substr(&quot;`class&#39;&quot;,4,.))</span>
+<span class="nv">				    g class_gnn=&quot;`class_tidy&#39;&quot;</span>
+<span class="nv">				    capture split class_gnn,p(&quot;_&quot;)</span>
+<span class="nv">				    capture keep drug_gnn class_gnn2</span>
+<span class="nv">				    //g group=`group&#39;+19</span>
+<span class="nv">				    keep if !missing(drug)</span>
+<span class="nv">				    local filename: di lower(substr(&quot;`class&#39;&quot;,4,.))</span>
+<span class="nv">				    capture save &quot;`group2&#39;_`filename&#39;&quot;,replace </span>
+<span class="nv">				    noi di &quot;`group2&#39;_`filename&#39;&quot;</span>
+<span class="nv">				    local group=`group&#39;+1</span>
+<span class="nv">					g group=`group2&#39;-2</span>
+<span class="nv">			    }</span>
+<span class="nv">				local group=`group&#39;+1 </span>
+<span class="nv">			}</span>
+<span class="nv">		}</span>
+<span class="nv">			clear </span>
+<span class="nv">            append using &quot;benzodiazepine lists12&quot; //short</span>
+<span class="nv">            append using &quot;benzodiazepine lists13&quot; //long</span>
+<span class="nv">            append using &quot;benzodiazepine lists14&quot; //unk</span>
+<span class="nv">			//replace group=12</span>
+<span class="nv">			drop class_gnn</span>
+<span class="nv">			rename class_gnn1 class_gnn2</span>
+<span class="nv">			save 12_benzodiazepines,replace </span>
+<span class="nv">		}</span>
+<span class="nv">	  cls</span>
+<span class="nv">	  rm &quot;benzodiazepine lists12.dta&quot;</span>
+<span class="nv">	  rm &quot;benzodiazepine lists13.dta&quot;</span>
+<span class="nv">	  rm &quot;benzodiazepine lists14.dta&quot;</span>
+<span class="nv">      noi ls //*.dta</span>
+<span class="nv">	  timer list </span>
+<span class="nv">	  log close </span>
+<span class="nv">	}</span>
+<span class="nv">//}</span>
 
 
-	  
+<span class="nv">	  	 </span>
+
+
+<span class="nv">	  </span>
 </pre></div>
 </div>
 <section id="eligibility">
