@@ -1475,20 +1475,20 @@ export delimited using <span class="s">&quot;05_antiinfective.txt&quot;</span>, 
 <span class="k">		clear</span>
 		cls
 <span class="k">		if</span> <span class="nf">c</span>(N) { <span class="c1">//background</span>
-			we compiled a comprehensive<span class="k"> list</span> of medications within 
-			each of the potentially inapporpriate medication (pim) 
-			classes<span class="k"> in</span> a systematic manner.
+			we compiled a comprehensive<span class="k"> list</span> of medications within     
+			each of the potentially inapporpriate medication (pim)     
+			classes<span class="k"> in</span> a systematic manner.    
 			
-			first, informaticists used micromedex, the control vocabularies of            
-			medline and embase, and medication websites to<span class="k"> generate</span> 
-			a trade and generic medication name<span class="k"> list</span>. 
+			first, informaticists used micromedex, the control vocabularies of                
+			medline and embase, and medication websites to<span class="k"> generate</span>     
+			a trade and generic medication name<span class="k"> list</span>.     
 			
-			second, this<span class="k"> list</span> was curated to allow medications with multiple
-            mechanisms of action to be represented<span class="k"> in more</span> than<span class="k"> one</span> pim<span class="k"> class</span>.
-			we removed pims with topical or ocular routes of administration. 
+			second, this<span class="k"> list</span> was curated to allow medications with multiple        
+            mechanisms of action to be represented<span class="k"> in more</span> than<span class="k"> one</span> pim<span class="k"> class</span>.     
+			we removed pims with topical or ocular routes of administration.     
 			
-			the final<span class="k"> list</span> was <span class="o">**</span>imported into stata<span class="o">**</span> to<span class="k"> query</span> 
-			medicare part<span class="k"> d</span> claims<span class="k"> for</span> pims...
+			the final<span class="k"> list</span> was <span class="o">**</span>imported into stata<span class="o">**</span> to<span class="k"> query</span>     
+			medicare part<span class="k"> d</span> claims<span class="k"> for</span> pims...    
 		} 
 <span class="k">		if</span> <span class="nf">c</span>(N)<span class="o">&lt;</span><span class="m">1</span> { <span class="c1">//methods</span>
 <span class="k">		    global</span> workdir <span class="nv">`c(pwd)&#39;</span> 
@@ -1498,52 +1498,52 @@ export delimited using <span class="s">&quot;05_antiinfective.txt&quot;</span>, 
 <span class="k">			else</span> {
 <span class="k">				global</span> workdir <span class="s">&quot;</span><span class="vg">$workdir</span><span class="s">/&quot;</span>
 			}
-			#delimit ;
-<span class="k">			global</span> catalog
-			    <span class="s">&quot;1-first gen antihisitamines&quot;</span>
-				<span class="s">&quot;2-antiparkinsonian agents&quot;</span>
-				<span class="s">&quot;3-Antispasmodics&quot;</span>
-				<span class="s">&quot;4-Antithrombotics&quot;</span>
-				<span class="s">&quot;5-antiinfective agents&quot;</span>
-				<span class="s">&quot;6-Peripheral alpha-1 blockers&quot;</span>
-				<span class="s">&quot;7-Central alpha-agonists&quot;</span>
-				<span class="s">&quot;8-Other CNS alpha-agonists&quot;</span>
-				<span class="s">&quot;9-Antidepressants&quot;</span>
-				<span class="s">&quot;10-Antipsychotic agents&quot;</span>
-				<span class="s">&quot;11-Barbituates&quot;</span>
-				<span class="s">&quot;12-Benzodiazepine lists&quot;</span>
-				<span class="s">&quot;12-Benzodiazepine lists&quot;</span>
-				<span class="s">&quot;12-Benzodiazepine lists&quot;</span>
-				<span class="s">&quot;13-Nonbenzodiazepines - Z-drugs&quot;</span>
-				<span class="s">&quot;14-Ergoloid Mesylates&quot;</span>
-				<span class="s">&quot;15-Androgens&quot;</span>
-				<span class="s">&quot;16-Estrogens&quot;</span>
-				<span class="s">&quot;17-Growth hormone&quot;</span>
-				<span class="s">&quot;18-Insulin&quot;</span>
-				<span class="s">&quot;19-Sulfonylureas&quot;</span>
-			    <span class="s">&quot;20.Proton_Pump_Inhibitors&quot;</span>
-				<span class="s">&quot;21.non-selective NSAIDS&quot;</span>
-				<span class="s">&quot;22.Skeletal muscle relaxants&quot;</span>
-				<span class="s">&quot;23.non-DHP CCB&quot;</span>
-				<span class="s">&quot;24.Thiazolidinediones&quot;</span>
-				<span class="s">&quot;25.Acetyl cholinesterase inhib&quot;</span>
-				<span class="s">&quot;26.alpha-1 blockers&quot;</span>
-				<span class="s">&quot;27.ti-cyclic antidepressants&quot;</span>
-				<span class="s">&quot;28.corticosteroids&quot;</span>
-				<span class="s">&quot;29.H2 receptor antagonists&quot;</span>
-				<span class="s">&quot;30.antiepileptics&quot;</span>
-				<span class="s">&quot;31.antiemetics&quot;</span>
-				<span class="s">&quot;32.NSAIDS&quot;</span>
-				<span class="s">&quot;33.Diuretics&quot;</span>
-				<span class="s">&quot;34.SNRIs&quot;</span>
-				<span class="s">&quot;35.SSRIs&quot;</span>
-				<span class="s">&quot;36.RAS Inhibitor&quot;</span>
-				<span class="s">&quot;37.Opioids&quot;</span>
-				<span class="s">&quot;38.Anticholinergic&quot;</span>;
-			#delimit cr 
-<span class="k">			capture log close</span> 
-<span class="k">			log</span> using <span class="s">&quot;</span><span class="vg">${workdir}</span><span class="s">01_bc050523.log&quot;</span>,replace 
-<span class="k">			set</span> max_memory .
+			#delimit ;   
+<span class="k">			global</span> catalog        
+			    <span class="s">&quot;1-first gen antihisitamines&quot;</span>     
+				<span class="s">&quot;2-antiparkinsonian agents&quot;</span>    
+				<span class="s">&quot;3-Antispasmodics&quot;</span>     
+				<span class="s">&quot;4-Antithrombotics&quot;</span>     
+				<span class="s">&quot;5-antiinfective agents&quot;</span>     
+				<span class="s">&quot;6-Peripheral alpha-1 blockers&quot;</span>    
+				<span class="s">&quot;7-Central alpha-agonists&quot;</span>    
+				<span class="s">&quot;8-Other CNS alpha-agonists&quot;</span>    
+				<span class="s">&quot;9-Antidepressants&quot;</span>    
+				<span class="s">&quot;10-Antipsychotic agents&quot;</span>    
+				<span class="s">&quot;11-Barbituates&quot;</span>    
+				<span class="s">&quot;12-Benzodiazepine lists&quot;</span>    
+				<span class="s">&quot;12-Benzodiazepine lists&quot;</span>    
+				<span class="s">&quot;12-Benzodiazepine lists&quot;</span>    
+				<span class="s">&quot;13-Nonbenzodiazepines - Z-drugs&quot;</span>    
+				<span class="s">&quot;14-Ergoloid Mesylates&quot;</span>    
+				<span class="s">&quot;15-Androgens&quot;</span>    
+				<span class="s">&quot;16-Estrogens&quot;</span>    
+				<span class="s">&quot;17-Growth hormone&quot;</span>    
+				<span class="s">&quot;18-Insulin&quot;</span>    
+				<span class="s">&quot;19-Sulfonylureas&quot;</span>    
+			    <span class="s">&quot;20.Proton_Pump_Inhibitors&quot;</span>    
+				<span class="s">&quot;21.non-selective NSAIDS&quot;</span>    
+				<span class="s">&quot;22.Skeletal muscle relaxants&quot;</span>    
+				<span class="s">&quot;23.non-DHP CCB&quot;</span>    
+				<span class="s">&quot;24.Thiazolidinediones&quot;</span>    
+				<span class="s">&quot;25.Acetyl cholinesterase inhib&quot;</span>    
+				<span class="s">&quot;26.alpha-1 blockers&quot;</span>    
+				<span class="s">&quot;27.ti-cyclic antidepressants&quot;</span>    
+				<span class="s">&quot;28.corticosteroids&quot;</span>    
+				<span class="s">&quot;29.H2 receptor antagonists&quot;</span>    
+				<span class="s">&quot;30.antiepileptics&quot;</span>    
+				<span class="s">&quot;31.antiemetics&quot;</span>    
+				<span class="s">&quot;32.NSAIDS&quot;</span>    
+				<span class="s">&quot;33.Diuretics&quot;</span>    
+				<span class="s">&quot;34.SNRIs&quot;</span>    
+				<span class="s">&quot;35.SSRIs&quot;</span>    
+				<span class="s">&quot;36.RAS Inhibitor&quot;</span>    
+				<span class="s">&quot;37.Opioids&quot;</span>    
+				<span class="s">&quot;38.Anticholinergic&quot;</span>;    
+			#delimit cr     
+<span class="k">			capture log close</span>     
+<span class="k">			log</span> using <span class="s">&quot;</span><span class="vg">${workdir}</span><span class="s">01_bc050523.log&quot;</span>,replace     
+<span class="k">			set</span> max_memory .    
 		}
 <span class="k">		if</span> <span class="nf">c</span>(N)<span class="o">==</span><span class="m">0</span> { <span class="c1">//results</span>
 <span class="k">		    local</span> group=<span class="m">1</span>
