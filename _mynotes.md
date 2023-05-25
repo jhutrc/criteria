@@ -1,3 +1,8 @@
+Idrisa
+1. medical assistant
+2. one unsuccessful cycle
+3. 
+
 1. revise this loop
 2. can cut its length by 80%
 3. lets do that on caffeine :)
