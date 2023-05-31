@@ -17,7 +17,7 @@
 
 ## Source
 * Target: Older patients on hemodialysis
-* Source: USRDS, N=561,304
+* Source: USRDS (N=561,304)
 * Study: First service date 2013-2014, no missing data, N=39,319
 
 ## Funding
