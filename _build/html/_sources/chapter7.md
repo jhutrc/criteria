@@ -24,6 +24,8 @@ Rasheeda Hall, 2424 Erwin Road, Suite 605, Durham NC 27705;
 
 ORCID: [0000-0002-3057-4828](javascript:popup_orcidDetail('http://orcid.org','0000-0002-3057-4828');)
 
+[View PDF](strings.pdf)
+
 **Abstract**
 
 **Background**
